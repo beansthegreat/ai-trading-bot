@@ -1,0 +1,29 @@
+2025-08-29 16:48:08 | ERROR    | utils.logger:error:64 - Failed to place market order: insufficient buying power
+2025-08-29 16:48:13 | ERROR    | utils.logger:error:64 - Dollar amount trading test failed: unsupported operand type(s) for /: 'dict' and 'float'
+2025-08-29 16:49:33 | ERROR    | utils.logger:error:64 - Failed to place market order: insufficient buying power
+2025-08-29 16:49:49 | ERROR    | utils.logger:error:64 - Failed to get account info: forbidden.
+2025-08-29 16:49:49 | ERROR    | utils.logger:error:64 - Connection test failed: forbidden.
+2025-08-29 16:50:07 | ERROR    | utils.logger:error:64 - Failed to get account info: forbidden.
+2025-08-29 16:50:07 | ERROR    | utils.logger:error:64 - Connection test failed: forbidden.
+2025-08-29 16:51:57 | ERROR    | utils.logger:error:64 - Dollar amount trading test failed: unsupported operand type(s) for /: 'dict' and 'float'
+2025-08-29 16:52:39 | ERROR    | utils.logger:error:64 - Failed to cancel order c1d1e4e0-64f7-4665-ba44-adf4ed3073ee: order is already in "filled" state
+2025-08-29 16:54:32 | ERROR    | utils.logger:error:64 - Failed to get historical data for AAPL: invalid timeframe: 30
+2025-08-29 16:54:32 | ERROR    | utils.logger:error:64 - Failed to get historical data for MSFT: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for GOOGL: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for TSLA: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for AMZN: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for NVDA: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for AMD: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Failed to get historical data for NVDA: invalid timeframe: 30
+2025-08-29 16:54:33 | ERROR    | utils.logger:error:64 - Buy/Sell test failed: invalid timeframe: 30
+2025-08-29 16:54:51 | ERROR    | utils.logger:error:64 - Failed to get historical data for AAPL: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:51 | ERROR    | utils.logger:error:64 - Failed to get historical data for MSFT: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:51 | ERROR    | utils.logger:error:64 - Failed to get historical data for GOOGL: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Failed to get historical data for TSLA: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Failed to get historical data for AMZN: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Failed to get historical data for NVDA: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Failed to get historical data for AMD: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Failed to get historical data for NVDA: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:54:52 | ERROR    | utils.logger:error:64 - Buy/Sell test failed: timeframe period number is larger than the allowed maximum of 1
+2025-08-29 16:55:15 | ERROR    | utils.logger:error:64 - Buy/Sell test failed: 'fill_price'
+2025-08-29 21:33:48 | ERROR    | utils.logger:error:64 - Error executing buy for AAPL: StrategyIntelligence.record_trade() missing 1 required positional argument: 'strategy_used'
