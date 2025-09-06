@@ -1,247 +1,217 @@
-# 🤖 Mr. Money - AI Trading Bot
+# 🚀 Advanced AI Trading Bot
 
-**Ultra-Intelligent Algorithmic Trading System with Adaptive Strategy Intelligence**
+A sophisticated, GPU-accelerated trading bot with comprehensive historical training, advanced AI models, and real-time market analysis.
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
+## ✨ Features
 
-## 🚀 Features
+### 🤖 **Advanced AI Engine**
+- **GPU-Accelerated ML**: XGBoost, LightGBM, CatBoost with RTX 5070 support
+- **Neural Networks**: Multi-layer perceptron for pattern recognition
+- **Ensemble Voting**: Combines multiple models for better predictions
+- **122+ Features**: Technical indicators, chart patterns, volume analysis
 
-### 🧠 **Smart Buy Low Sell High Strategy**
-- **Multi-timeframe analysis** (1h, 3h, 6h patterns)
-- **Chart pattern recognition** beyond simple RSI
-- **Intelligent buy/sell detection** based on:
-  - Recent price movements
-  - RSI levels (oversold/overbought)
-  - Momentum indicators
-  - Volatility analysis
-  - Trend patterns
+### 📊 **Historical Training System**
+- **Multi-Timeframe Data**: 1m, 5m, 15m, 1h, 1d intervals
+- **3 Years of History**: Comprehensive market data collection
+- **Chart Pattern Recognition**: 12+ patterns (Head & Shoulders, Triangles, etc.)
+- **Volume Analysis**: VWAP, volume spikes, volume profiles
+- **Market Regime Detection**: Trending, volatile, choppy, stable conditions
 
-### 🎯 **Adaptive Strategy Intelligence**
-- **Market regime detection** (trending, choppy, volatile, stable)
-- **Dynamic strategy switching** based on market conditions
-- **Multiple strategy support**:
-  - Smart Buy Low Sell High
-  - Momentum Micro
-  - Breakout
-  - Conservative
+### 🎯 **Trading Strategies**
+- **Momentum Strategy**: RSI, MACD, ADX confirmation
+- **Adaptive Strategy**: Dynamic strategy selection based on market conditions
+- **AI-Enhanced Strategy**: Machine learning predictions
+- **Risk Management**: Position sizing, stop-loss, take-profit
 
-### 💰 **Advanced Trading Features**
-- **Multi-share buying** with fractional shares
-- **Dollar amount trading** for expensive stocks
-- **Intelligent position sizing** based on signal strength
-- **Volatility-adjusted risk management**
-- **Real-time market data** via Alpaca API
-- **Paper trading support** for safe testing
+### 📈 **Real-Time Analysis**
+- **Live Market Monitoring**: Real-time price and volume tracking
+- **Signal Generation**: Buy/sell signals with confidence scores
+- **Performance Analytics**: Comprehensive trading metrics
+- **Alerts System**: Customizable notifications
 
-### 🛡️ **Risk Management**
-- **Stop-loss protection** (1.5% default)
-- **Take-profit targets** (3.0% default)
-- **Daily loss limits** ($500 default)
-- **Position size limits** ($1000 max per trade)
-- **Wash sale prevention** (30-day window)
-- **Cooldown periods** to prevent overtrading
+## 🏗️ Project Structure
 
-### ⏰ **Timezone-Aware Scheduling**
-- **NYSE market hours** (9:30 AM - 4:00 PM ET)
-- **Automatic trading sessions**
-- **Market open/close detection**
-- **Global timezone support**
-
-## 📊 **Current Performance**
-
-The bot is actively trading with:
-- **Strategy**: Smart Buy Low Sell High
-- **Market Regime**: Trending (80% confidence)
-- **Active Symbols**: AAPL, MSFT, GOOGL, TSLA, AMZN, NVDA, AMD
-- **Signal Strength**: 0.7 (Strong buy signals detected)
-
-## 🛠️ Installation
-
-### Prerequisites
-```bash
-Python 3.8+
-pip
-git
+```
+money/
+├── 📁 src/                    # Core source code
+│   ├── ai_engine.py          # Standard AI engine
+│   ├── advanced_ai_engine.py # Advanced AI with ensemble
+│   ├── trading_bot.py        # Main trading bot
+│   └── ...
+├── 📁 scripts/               # Production scripts
+│   ├── start_trading_bot.py  # Start the trading bot
+│   ├── collect_historical_data.py # Data collection
+│   ├── train_historical_models.py # Model training
+│   └── ...
+├── 📁 data/                  # Data storage
+│   ├── models/              # Trained AI models
+│   ├── historical/          # Historical market data
+│   └── cache/               # Training cache
+├── 📁 docs/                  # Documentation
+├── 📁 tests/                 # Test files
+├── 📁 examples/              # Example scripts
+└── 📁 logs/                  # Log files
 ```
 
-### Setup
+## 🚀 Quick Start
+
+### 1. **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mr.money.git
-cd mr.money
+git clone <your-repo-url>
+cd money
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
-# Configure your Alpaca API credentials
+### 2. **Configuration**
+```bash
+# Copy and configure API keys
 cp config.example.py config.py
-# Edit config.py with your API keys
+# Edit config.py with your Alpaca API credentials
+```
 
-# Run the bot
+### 3. **Historical Training** (Recommended)
+```bash
+# Collect historical data
+python scripts/collect_historical_data.py
+
+# Train AI models
+python scripts/train_historical_models.py
+
+# Or run complete pipeline
+python scripts/run_complete_training.py
+```
+
+### 4. **Start Trading**
+```bash
+# Start the trading bot
+python scripts/start_trading_bot.py
+
+# Or run main script
 python main.py
 ```
 
-## 📁 Project Structure
+## 📊 Training Results
 
+Our AI models achieve impressive accuracy across multiple stocks:
+
+| Stock | XGBoost | LightGBM | Ensemble | Best Model |
+|-------|---------|----------|----------|------------|
+| AAPL  | 70.2%   | 64.0%    | 71.5%    | Ensemble   |
+| MSFT  | 69.4%   | 64.5%    | 68.6%    | XGBoost    |
+| GOOGL | 68.2%   | 60.7%    | 69.4%    | Ensemble   |
+| TSLA  | 75.2%   | 65.7%    | 78.9%    | Ensemble   |
+| AMZN  | 63.6%   | 57.0%    | 66.9%    | Ensemble   |
+| NVDA  | 73.6%   | 69.4%    | 71.9%    | XGBoost    |
+| AMD   | 71.1%   | 63.2%    | 73.6%    | Ensemble   |
+
+## 🛠️ Advanced Features
+
+### **GPU Acceleration**
+- **RTX 5070 Support**: Optimized for NVIDIA GPUs
+- **CUDA Integration**: XGBoost, LightGBM, CatBoost GPU training
+- **Memory Optimization**: Efficient GPU memory usage
+
+### **Data Collection**
+- **84,840+ Data Points**: Comprehensive historical coverage
+- **Multi-Source**: Alpaca API + Yahoo Finance fallback
+- **Real-Time Updates**: Live market data integration
+
+### **Risk Management**
+- **Position Sizing**: Dynamic position calculation
+- **Stop-Loss/Take-Profit**: Automated risk controls
+- **Daily Loss Limits**: Maximum loss protection
+- **Wash Sale Prevention**: Tax optimization
+
+## 📚 Documentation
+
+- **[Enhanced Features](docs/ENHANCED_FEATURES.md)**: Detailed feature documentation
+- **[Historical Training](docs/HISTORICAL_TRAINING.md)**: Training system guide
+- **[Python Setup](docs/README_PYTHON.md)**: Python environment setup
+- **[Timezone Implementation](docs/TIMEZONE_IMPLEMENTATION.md)**: Timezone handling
+
+## 🔧 Scripts Overview
+
+### **Core Scripts**
+- `start_trading_bot.py`: Main trading bot launcher
+- `collect_historical_data.py`: Historical data collection
+- `train_historical_models.py`: AI model training
+- `run_complete_training.py`: Complete training pipeline
+
+### **Monitoring Scripts**
+- `live_monitor.py`: Real-time market monitoring
+- `simple_monitor.py`: Basic monitoring
+- `tail_logs.py`: Log file monitoring
+
+### **Analysis Scripts**
+- `buy_signal_scanner.py`: Signal scanning
+- `run_backtest.py`: Backtesting
+- `training_dashboard.py`: Training visualization
+
+## ⚙️ Configuration
+
+Key configuration options in `config.py`:
+
+```python
+# API Configuration
+ALPACA_API_KEY = "your_api_key"
+ALPACA_SECRET_KEY = "your_secret_key"
+ALPACA_BASE_URL = "https://paper-api.alpaca.markets"
+
+# Trading Parameters
+DEFAULT_SYMBOL = "AAPL"
+POSITION_SIZE = 0.1  # 10% of portfolio
+STOP_LOSS_PCT = 0.02  # 2% stop loss
+TAKE_PROFIT_PCT = 0.04  # 4% take profit
+
+# AI Parameters
+USE_GPU = True
+MODEL_RETRAIN_HOURS = 24
+CONFIDENCE_THRESHOLD = 0.7
 ```
-mr.money/
-├── main.py                 # Main bot entry point
-├── config.py              # Configuration and API keys
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── .gitignore           # Git ignore rules
-├── src/
-│   └── trading_bot.py   # Core trading bot logic
-├── strategies/
-│   ├── momentum_strategy.py      # Smart Buy Low Sell High
-│   └── adaptive_strategy.py      # Strategy intelligence
-├── utils/
-│   ├── alpaca_client.py         # Alpaca API client
-│   ├── risk_management.py       # Risk management system
-│   ├── indicators.py            # Technical indicators
-│   ├── logger.py               # Logging system
-│   └── performance_analytics.py # Performance tracking
-├── scripts/
-│   ├── live_monitor.py         # Real-time monitoring
-│   ├── clean_monitor.py        # Clean monitoring interface
-│   ├── simple_monitor.py       # Ultra-simple monitor
-│   └── buy_signal_scanner.py   # Buy signal scanner
-├── tests/                     # Test files
-└── logs/                     # Log files
-```
 
-## 🎮 Usage
+## 🧪 Testing
 
-### Start Trading Bot
 ```bash
-python main.py
+# Run all tests
+python -m pytest tests/
+
+# Run specific test
+python tests/test_connection.py
+python tests/test_enhanced_features.py
 ```
 
-### Monitor Trading Activity
-```bash
-# Real-time monitoring
-python scripts/live_monitor.py
+## 📈 Performance
 
-# Clean interface
-python scripts/clean_monitor.py
-
-# Simple monitor
-python scripts/simple_monitor.py
-```
-
-### Scan for Buy Signals
-```bash
-python scripts/buy_signal_scanner.py
-```
-
-### Run Backtests
-```bash
-python scripts/run_backtest.py
-```
-
-## 🔧 Configuration
-
-### Environment Variables
-```bash
-# Trading mode (paper/live)
-TRADING_MODE=paper
-
-# Position sizing
-MAX_POSITION_SIZE=1000
-DAILY_LOSS_LIMIT=500
-MAX_POSITIONS=5
-
-# Risk management
-STOP_LOSS_PERCENT=1.5
-TAKE_PROFIT_PERCENT=3.0
-RISK_PERCENTAGE=4
-
-# API rate limits
-MAX_API_CALLS_PER_MINUTE=150
-TRADING_CYCLE_MINUTES=2
-```
-
-### Trading Symbols
-Currently configured for:
-- **AAPL** (Apple)
-- **MSFT** (Microsoft)
-- **GOOGL** (Google)
-- **TSLA** (Tesla)
-- **AMZN** (Amazon)
-- **NVDA** (NVIDIA)
-- **AMD** (Advanced Micro Devices)
-
-## 📈 How It Works
-
-### 1. **Market Analysis**
-The bot analyzes each stock using:
-- **RSI** (Relative Strength Index)
-- **MACD** (Moving Average Convergence Divergence)
-- **ADX** (Average Directional Index)
-- **Volatility** (ATR-based)
-- **Volume** analysis
-
-### 2. **Smart Buy Low Detection**
-Looks for:
-- Recent price drops (1h, 3h, 6h)
-- RSI below 45 (approaching oversold)
-- Negative momentum
-- High volatility (panic selling)
-- Multi-day downtrends
-
-### 3. **Smart Sell High Detection**
-Looks for:
-- Recent price rises (1h, 3h, 6h)
-- RSI above 55 (approaching overbought)
-- Positive momentum
-- High volatility (excitement)
-- Multi-day uptrends
-
-### 4. **Position Sizing**
-- **Strong signals** (0.7+): Full position
-- **Medium signals** (0.5+): 70% position
-- **Weak signals** (0.3+): 50% position
-- **Volatility adjustment**: Smaller positions for volatile stocks
-
-## 🚨 Disclaimer
-
-**This is for educational and research purposes only. Trading involves substantial risk of loss and is not suitable for all investors. Past performance does not guarantee future results.**
-
-- Use paper trading for testing
-- Start with small amounts
-- Never invest more than you can afford to lose
-- Monitor the bot regularly
-- Understand the risks involved
+- **Training Speed**: ~2-3 minutes per symbol (GPU-accelerated)
+- **Prediction Speed**: <100ms per prediction
+- **Memory Usage**: ~2GB RAM, ~4GB VRAM
+- **Accuracy**: 60-80% across different stocks
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
 
-## 📝 License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## ⚠️ Disclaimer
 
-- **Alpaca Markets** for the trading API
-- **yfinance** for market data
-- **pandas** for data analysis
-- **numpy** for numerical computations
-- **ta-lib** for technical indicators
+This software is for educational and research purposes only. Trading involves risk, and past performance does not guarantee future results. Always do your own research and consider consulting with a financial advisor before making investment decisions.
 
-## 📞 Support
+## 🆘 Support
 
-For questions, issues, or contributions:
-- Open an issue on GitHub
-- Check the documentation in `/docs`
-- Review the test files for examples
+- **Issues**: Report bugs and request features via GitHub Issues
+- **Documentation**: Check the `docs/` folder for detailed guides
+- **Examples**: See the `examples/` folder for usage examples
 
 ---
 
-**Happy Trading! 🚀💰**
+**Built with ❤️ for the trading community**

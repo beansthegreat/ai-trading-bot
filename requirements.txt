@@ -8,3 +8,16 @@ ta>=0.10.0
 yfinance>=0.1.70
 pytz>=2021.1
 loguru>=0.6.0
+
+# AI/ML Libraries for GPU acceleration
+xgboost>=1.7.0
+lightgbm>=3.3.0
+scikit-learn>=1.1.0
+joblib>=1.2.0
+mlflow>=1.28.0
+
+# Advanced ML Libraries for historical training
+catboost>=1.2.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0

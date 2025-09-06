@@ -43,8 +43,21 @@ class StrategyIntelligence:
     def _initialize_strategies(self):
         """Initialize all available strategies"""
         from strategies.momentum_strategy import MomentumStrategy
+        from strategies.ai_enhanced_strategy import AIEnhancedStrategy
         
-        # Strategy 1: Buy Low Sell High (for trending markets)
+        # Strategy 1: AI-Enhanced Strategy (for all market conditions)
+        self.strategies['ai_enhanced'] = {
+            'strategy': AIEnhancedStrategy(),
+            'description': 'GPU-accelerated AI-enhanced momentum strategy',
+            'best_for': ['trending', 'choppy', 'volatile', 'stable'],
+            'conditions': {
+                'adx_min': 0,  # Works in all conditions
+                'volatility_min': 0,
+                'rsi_range': [0, 100]
+            }
+        }
+        
+        # Strategy 2: Buy Low Sell High (for trending markets)
         self.strategies['buy_low_sell_high'] = {
             'strategy': MomentumStrategy(),
             'description': 'RSI-based buy low, sell high strategy',
