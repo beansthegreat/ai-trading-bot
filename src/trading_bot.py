@@ -9,6 +9,7 @@ from config import config
 from utils.logger import trading_logger
 from utils.alpaca_client import alpaca_client
 from utils.risk_management import risk_manager
+from utils.news_anchor import NewsAnchor
 from strategies.adaptive_strategy import StrategyIntelligence
 
 class TradingBot:
@@ -16,6 +17,7 @@ class TradingBot:
     
     def __init__(self):
         self.strategy = StrategyIntelligence()
+        self.news_anchor = NewsAnchor()
         self.is_running = False
         self.last_run = None
         self.trades_today = 0
@@ -47,6 +49,13 @@ class TradingBot:
             # Keep the bot running
             while self.is_running:
                 schedule.run_pending()
+                
+                # Check if it's time for a news update
+                if self.news_anchor.should_give_update():
+                    recent_activity = self.news_anchor.get_recent_activity()
+                    self.news_anchor.give_market_update(recent_activity)
+                    self.news_anchor.reset_counters()
+                
                 time.sleep(60)  # Check every minute
                 
         except KeyboardInterrupt:
@@ -250,6 +259,10 @@ class TradingBot:
             # Analyze with strategy
             analysis = self.strategy.analyze(df)
             
+            # Record signal for news anchor (for WAIT/NEUTRAL signals)
+            if analysis['signal'] in ['neutral', 'wait', 'hold']:
+                self.news_anchor.record_signal('WAIT', symbol)
+            
             trading_logger.debug(
                 f"Analysis for {symbol}",
                 signal=analysis['signal'],
@@ -314,10 +327,27 @@ class TradingBot:
                                   reason=position_info['reason'])
             
             # Record trade for cooldown system
-            self.strategy.record_trade(symbol)
+            if hasattr(self.strategy, 'record_trade'):
+                # Check if it's StrategyIntelligence (needs strategy_used parameter)
+                if hasattr(self.strategy, 'current_strategy'):
+                    self.strategy.record_trade(symbol, self.strategy.current_strategy)
+                else:
+                    # For other strategies like MomentumStrategy
+                    self.strategy.record_trade(symbol)
             
-            # Log the trade with the correct amount
+            # Log the trade execution with teen-friendly explanation
+            trade_explanation = f"Order placed successfully! {position_info['reason']} - we're officially in the game! 🚀"
             if position_info['type'] == 'dollar_amount':
+                trading_logger.decision(
+                    action='BUY',
+                    symbol=symbol,
+                    explanation=trade_explanation,
+                    amount=f"${position_info['amount']:.2f}",
+                    price=f"${current_price:.2f}",
+                    order_id=order['id']
+                )
+                # Record for news anchor
+                self.news_anchor.record_signal('BUY', symbol)
                 trading_logger.trade(
                     action='BUY',
                     symbol=symbol,
@@ -327,6 +357,16 @@ class TradingBot:
                     strength=analysis['strength']
                 )
             else:
+                trading_logger.decision(
+                    action='BUY',
+                    symbol=symbol,
+                    explanation=trade_explanation,
+                    shares=position_info['amount'],
+                    price=f"${current_price:.2f}",
+                    order_id=order['id']
+                )
+                # Record for news anchor
+                self.news_anchor.record_signal('BUY', symbol)
                 trading_logger.trade(
                     action='BUY',
                     symbol=symbol,
@@ -348,12 +388,38 @@ class TradingBot:
             order = alpaca_client.place_market_order(symbol, 'sell', quantity)
             
             # Record trade for cooldown system
-            self.strategy.record_trade(symbol)
+            if hasattr(self.strategy, 'record_trade'):
+                # Check if it's StrategyIntelligence (needs strategy_used parameter)
+                if hasattr(self.strategy, 'current_strategy'):
+                    self.strategy.record_trade(symbol, self.strategy.current_strategy)
+                else:
+                    # For other strategies like MomentumStrategy
+                    self.strategy.record_trade(symbol)
             
             # Record potential wash sale if selling at a loss
             unrealized_pl = float(position.get('unrealized_pl', 0))
             if unrealized_pl < 0:  # Selling at a loss
                 risk_manager.record_wash_sale(symbol, 'sell', abs(unrealized_pl))
+            
+            # Generate teen-friendly sell explanation
+            if unrealized_pl > 0:
+                sell_explanation = f"SELLING because we made ${unrealized_pl:.2f} profit - time to take our money and celebrate! 🎉"
+            elif unrealized_pl < 0:
+                sell_explanation = f"SELLING because we're losing ${abs(unrealized_pl):.2f} - better to cut our losses now before it gets worse"
+            else:
+                sell_explanation = f"SELLING because our strategy says it's time - {analysis.get('reason', 'following the plan')}"
+            
+            # Log the sell decision with explanation
+            trading_logger.decision(
+                action='SELL',
+                symbol=symbol,
+                explanation=sell_explanation,
+                shares=quantity,
+                pnl=f"${unrealized_pl:.2f}",
+                order_id=order['id']
+            )
+            # Record for news anchor
+            self.news_anchor.record_signal('SELL', symbol)
             
             trading_logger.trade(
                 action='SELL',

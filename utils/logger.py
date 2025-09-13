@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from datetime import datetime
 from loguru import logger
 from config import config
@@ -92,6 +93,21 @@ class TradingLogger:
         if kwargs:
             trade_info += f" | {kwargs}"
         
+        # Show trade execution prominently in console with typing effect
+        action_emoji = {"BUY": "🟢", "SELL": "🔴"}.get(action.upper(), "❓")
+        print(f"\n{'🚀'*20} TRADE EXECUTED {'🚀'*20}")
+        self._type_decision_line(f"{action_emoji} {action.upper()} ORDER PLACED: {symbol}")
+        if dollar_amount:
+            self._type_decision_line(f"💰 AMOUNT: ${dollar_amount:.2f}")
+        elif quantity:
+            self._type_decision_line(f"📊 SHARES: {quantity}")
+        if price:
+            self._type_decision_line(f"💵 PRICE: ${price:.2f}")
+        if kwargs:
+            self._type_decision_line(f"📋 DETAILS: {kwargs}")
+        print(f"{'🚀'*20} TRADE EXECUTED {'🚀'*20}\n")
+        
+        # Also log normally to files
         logger.info(trade_info)
     
     def strategy(self, strategy_name: str, signal: str, symbol: str, **kwargs):
@@ -101,6 +117,33 @@ class TradingLogger:
             signal_info += f" | {kwargs}"
         
         logger.info(signal_info)
+    
+    def decision(self, action: str, symbol: str, explanation: str, **kwargs):
+        """Log trading decision with simple explanation"""
+        action_emoji = {"BUY": "🟢", "SELL": "🔴", "HOLD": "🟡", "NEUTRAL": "⚪"}.get(action.upper(), "❓")
+        decision_info = f"{action_emoji} {action.upper()} {symbol}: {explanation}"
+        
+        if kwargs:
+            decision_info += f" | {kwargs}"
+        
+        # Log to console with special formatting and typing effect
+        print(f"\n{'='*80}")
+        self._type_decision_line(f"🎯 TRADING DECISION: {action_emoji} {action.upper()} {symbol}")
+        self._type_decision_line(f"📝 REASON: {explanation}")
+        if kwargs:
+            self._type_decision_line(f"📊 DETAILS: {kwargs}")
+        print(f"{'='*80}\n")
+        
+        # Also log normally to files
+        logger.info(decision_info)
+    
+    def _type_decision_line(self, text: str, delay: float = 0.02):
+        """Type out a decision line character by character"""
+        for char in text:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(delay)
+        print()  # Add newline after typing
 
 # Global logger instance
 trading_logger = TradingLogger()

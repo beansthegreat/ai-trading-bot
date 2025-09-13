@@ -1,183 +1,438 @@
-2025-09-06 18:37:40 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:37:40 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:37:40 | INFO     | utils.logger:info:50 - Advanced MLflow tracking initialized
-2025-09-06 18:37:40 | INFO     | utils.logger:info:48 - Advanced AI Engine initialized | {'gpu_available': True, 'feature_selection': True, 'ensemble_voting': True}
-2025-09-06 18:37:40 | INFO     | utils.logger:info:48 - Historical Training System initialized | {'timeframes': ['1m', '5m', '15m', '1h', '1d'], 'historical_years': 3, 'min_data_points': 1000}
-2025-09-06 18:40:09 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:40:09 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:40:26 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:40:26 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:41:04 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:41:04 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:41:04 | INFO     | utils.logger:info:50 - Advanced MLflow tracking initialized
-2025-09-06 18:41:04 | INFO     | utils.logger:info:48 - Advanced AI Engine initialized | {'gpu_available': True, 'feature_selection': True, 'ensemble_voting': True}
-2025-09-06 18:41:04 | INFO     | utils.logger:info:48 - Historical Training System initialized | {'timeframes': ['1m', '5m', '15m', '1h', '1d'], 'historical_years': 3, 'min_data_points': 1000}
-2025-09-06 18:41:05 | INFO     | utils.logger:info:48 - XGBoost model trained for AAPL | {'accuracy': '0.702', 'gpu_used': True}
-2025-09-06 18:41:08 | INFO     | utils.logger:info:48 - LightGBM model trained for AAPL | {'accuracy': '0.678', 'gpu_used': True}
-2025-09-06 18:41:08 | INFO     | utils.logger:info:48 - Random Forest model trained for AAPL | {'accuracy': '0.678'}
-2025-09-06 18:41:08 | SUCCESS  | utils.logger:success:76 - AI models trained for AAPL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:41:08 | SUCCESS  | utils.logger:success:78 - Models saved for AAPL
-2025-09-06 18:41:09 | INFO     | utils.logger:info:48 - XGBoost model trained for MSFT | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:42:20 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:42:20 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:42:39 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:42:39 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:42:48 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:42:48 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:42:48 | INFO     | utils.logger:info:50 - Advanced MLflow tracking initialized
-2025-09-06 18:42:48 | INFO     | utils.logger:info:48 - Advanced AI Engine initialized | {'gpu_available': True, 'feature_selection': True, 'ensemble_voting': True}
-2025-09-06 18:42:48 | INFO     | utils.logger:info:48 - Historical Training System initialized | {'timeframes': ['1m', '5m', '15m', '1h', '1d'], 'historical_years': 3, 'min_data_points': 1000}
-2025-09-06 18:42:49 | INFO     | utils.logger:info:48 - XGBoost model trained for AAPL | {'accuracy': '0.702', 'gpu_used': True}
-2025-09-06 18:42:51 | INFO     | utils.logger:info:48 - LightGBM model trained for AAPL | {'accuracy': '0.640', 'gpu_used': True}
-2025-09-06 18:42:51 | INFO     | utils.logger:info:48 - Random Forest model trained for AAPL | {'accuracy': '0.678'}
-2025-09-06 18:42:51 | SUCCESS  | utils.logger:success:76 - AI models trained for AAPL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:42:51 | SUCCESS  | utils.logger:success:78 - Models saved for AAPL
-2025-09-06 18:42:54 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AAPL | {'accuracy': '0.702', 'gpu_used': True}
-2025-09-06 18:42:57 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for AAPL | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:42:57 | INFO     | utils.logger:info:48 - Neural Network trained for AAPL | {'accuracy': '0.570'}
-2025-09-06 18:43:00 | INFO     | utils.logger:info:48 - Ensemble model trained for AAPL | {'accuracy': '0.715'}
-2025-09-06 18:43:00 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for AAPL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:00 | SUCCESS  | utils.logger:success:78 - Advanced models saved for AAPL
-2025-09-06 18:43:01 | INFO     | utils.logger:info:48 - XGBoost model trained for MSFT | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:43:02 | INFO     | utils.logger:info:48 - LightGBM model trained for MSFT | {'accuracy': '0.645', 'gpu_used': True}
-2025-09-06 18:43:02 | INFO     | utils.logger:info:48 - Random Forest model trained for MSFT | {'accuracy': '0.665'}
-2025-09-06 18:43:02 | SUCCESS  | utils.logger:success:76 - AI models trained for MSFT | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:02 | SUCCESS  | utils.logger:success:78 - Models saved for MSFT
-2025-09-06 18:43:04 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for MSFT | {'accuracy': '0.686', 'gpu_used': True}
-2025-09-06 18:43:07 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for MSFT | {'accuracy': '0.682', 'gpu_used': True}
-2025-09-06 18:43:07 | INFO     | utils.logger:info:48 - Neural Network trained for MSFT | {'accuracy': '0.591'}
-2025-09-06 18:43:10 | INFO     | utils.logger:info:48 - Ensemble model trained for MSFT | {'accuracy': '0.674'}
-2025-09-06 18:43:10 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for MSFT | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:10 | SUCCESS  | utils.logger:success:78 - Advanced models saved for MSFT
-2025-09-06 18:43:11 | INFO     | utils.logger:info:48 - XGBoost model trained for GOOGL | {'accuracy': '0.682', 'gpu_used': True}
-2025-09-06 18:43:12 | INFO     | utils.logger:info:48 - LightGBM model trained for GOOGL | {'accuracy': '0.607', 'gpu_used': True}
-2025-09-06 18:43:12 | INFO     | utils.logger:info:48 - Random Forest model trained for GOOGL | {'accuracy': '0.649'}
-2025-09-06 18:43:12 | SUCCESS  | utils.logger:success:76 - AI models trained for GOOGL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:12 | SUCCESS  | utils.logger:success:78 - Models saved for GOOGL
-2025-09-06 18:43:14 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for GOOGL | {'accuracy': '0.690', 'gpu_used': True}
-2025-09-06 18:43:17 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for GOOGL | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:43:18 | INFO     | utils.logger:info:48 - Neural Network trained for GOOGL | {'accuracy': '0.533'}
-2025-09-06 18:43:21 | INFO     | utils.logger:info:48 - Ensemble model trained for GOOGL | {'accuracy': '0.690'}
-2025-09-06 18:43:21 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for GOOGL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:21 | SUCCESS  | utils.logger:success:78 - Advanced models saved for GOOGL
-2025-09-06 18:43:22 | INFO     | utils.logger:info:48 - XGBoost model trained for TSLA | {'accuracy': '0.752', 'gpu_used': True}
-2025-09-06 18:43:22 | INFO     | utils.logger:info:48 - LightGBM model trained for TSLA | {'accuracy': '0.657', 'gpu_used': True}
-2025-09-06 18:43:23 | INFO     | utils.logger:info:48 - Random Forest model trained for TSLA | {'accuracy': '0.665'}
-2025-09-06 18:43:23 | SUCCESS  | utils.logger:success:76 - AI models trained for TSLA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:23 | SUCCESS  | utils.logger:success:78 - Models saved for TSLA
-2025-09-06 18:43:25 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for TSLA | {'accuracy': '0.789', 'gpu_used': True}
-2025-09-06 18:43:28 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for TSLA | {'accuracy': '0.781', 'gpu_used': True}
-2025-09-06 18:43:29 | INFO     | utils.logger:info:48 - Neural Network trained for TSLA | {'accuracy': '0.727'}
-2025-09-06 18:43:32 | INFO     | utils.logger:info:48 - Ensemble model trained for TSLA | {'accuracy': '0.789'}
-2025-09-06 18:43:32 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for TSLA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:32 | SUCCESS  | utils.logger:success:78 - Advanced models saved for TSLA
-2025-09-06 18:43:33 | INFO     | utils.logger:info:48 - XGBoost model trained for AMZN | {'accuracy': '0.636', 'gpu_used': True}
-2025-09-06 18:43:33 | INFO     | utils.logger:info:48 - LightGBM model trained for AMZN | {'accuracy': '0.570', 'gpu_used': True}
-2025-09-06 18:43:33 | INFO     | utils.logger:info:48 - Random Forest model trained for AMZN | {'accuracy': '0.607'}
-2025-09-06 18:43:33 | SUCCESS  | utils.logger:success:76 - AI models trained for AMZN | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:33 | SUCCESS  | utils.logger:success:78 - Models saved for AMZN
-2025-09-06 18:43:36 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AMZN | {'accuracy': '0.649', 'gpu_used': True}
-2025-09-06 18:43:39 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for AMZN | {'accuracy': '0.624', 'gpu_used': True}
-2025-09-06 18:43:39 | INFO     | utils.logger:info:48 - Neural Network trained for AMZN | {'accuracy': '0.583'}
-2025-09-06 18:43:43 | INFO     | utils.logger:info:48 - Ensemble model trained for AMZN | {'accuracy': '0.669'}
-2025-09-06 18:43:43 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for AMZN | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:43 | SUCCESS  | utils.logger:success:78 - Advanced models saved for AMZN
-2025-09-06 18:43:44 | INFO     | utils.logger:info:48 - XGBoost model trained for NVDA | {'accuracy': '0.736', 'gpu_used': True}
-2025-09-06 18:43:44 | INFO     | utils.logger:info:48 - LightGBM model trained for NVDA | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:43:44 | INFO     | utils.logger:info:48 - Random Forest model trained for NVDA | {'accuracy': '0.694'}
-2025-09-06 18:43:44 | SUCCESS  | utils.logger:success:76 - AI models trained for NVDA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:44 | SUCCESS  | utils.logger:success:78 - Models saved for NVDA
-2025-09-06 18:43:47 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for NVDA | {'accuracy': '0.715', 'gpu_used': True}
-2025-09-06 18:43:49 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for NVDA | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:43:50 | INFO     | utils.logger:info:48 - Neural Network trained for NVDA | {'accuracy': '0.591'}
-2025-09-06 18:43:53 | INFO     | utils.logger:info:48 - Ensemble model trained for NVDA | {'accuracy': '0.719'}
-2025-09-06 18:43:53 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for NVDA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:53 | SUCCESS  | utils.logger:success:78 - Advanced models saved for NVDA
-2025-09-06 18:43:54 | INFO     | utils.logger:info:48 - XGBoost model trained for AMD | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:43:55 | INFO     | utils.logger:info:48 - LightGBM model trained for AMD | {'accuracy': '0.632', 'gpu_used': True}
-2025-09-06 18:43:55 | INFO     | utils.logger:info:48 - Random Forest model trained for AMD | {'accuracy': '0.690'}
-2025-09-06 18:43:55 | SUCCESS  | utils.logger:success:76 - AI models trained for AMD | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:43:55 | SUCCESS  | utils.logger:success:78 - Models saved for AMD
-2025-09-06 18:43:57 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AMD | {'accuracy': '0.736', 'gpu_used': True}
-2025-09-06 18:45:19 | INFO     | utils.logger:info:50 - MLflow tracking initialized
-2025-09-06 18:45:19 | INFO     | utils.logger:info:48 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
-2025-09-06 18:45:19 | INFO     | utils.logger:info:50 - Advanced MLflow tracking initialized
-2025-09-06 18:45:19 | INFO     | utils.logger:info:48 - Advanced AI Engine initialized | {'gpu_available': True, 'feature_selection': True, 'ensemble_voting': True}
-2025-09-06 18:45:19 | INFO     | utils.logger:info:48 - Historical Training System initialized | {'timeframes': ['1m', '5m', '15m', '1h', '1d'], 'historical_years': 3, 'min_data_points': 1000}
-2025-09-06 18:45:20 | INFO     | utils.logger:info:48 - XGBoost model trained for AAPL | {'accuracy': '0.702', 'gpu_used': True}
-2025-09-06 18:45:22 | INFO     | utils.logger:info:48 - LightGBM model trained for AAPL | {'accuracy': '0.640', 'gpu_used': True}
-2025-09-06 18:45:22 | INFO     | utils.logger:info:48 - Random Forest model trained for AAPL | {'accuracy': '0.678'}
-2025-09-06 18:45:22 | SUCCESS  | utils.logger:success:76 - AI models trained for AAPL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:22 | SUCCESS  | utils.logger:success:78 - Models saved for AAPL
-2025-09-06 18:45:24 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AAPL | {'accuracy': '0.702', 'gpu_used': True}
-2025-09-06 18:45:27 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for AAPL | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:45:28 | INFO     | utils.logger:info:48 - Neural Network trained for AAPL | {'accuracy': '0.570'}
-2025-09-06 18:45:31 | INFO     | utils.logger:info:48 - Ensemble model trained for AAPL | {'accuracy': '0.715'}
-2025-09-06 18:45:31 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for AAPL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:31 | SUCCESS  | utils.logger:success:78 - Advanced models saved for AAPL
-2025-09-06 18:45:32 | INFO     | utils.logger:info:48 - XGBoost model trained for MSFT | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:45:32 | INFO     | utils.logger:info:48 - LightGBM model trained for MSFT | {'accuracy': '0.645', 'gpu_used': True}
-2025-09-06 18:45:32 | INFO     | utils.logger:info:48 - Random Forest model trained for MSFT | {'accuracy': '0.665'}
-2025-09-06 18:45:32 | SUCCESS  | utils.logger:success:76 - AI models trained for MSFT | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:32 | SUCCESS  | utils.logger:success:78 - Models saved for MSFT
-2025-09-06 18:45:35 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for MSFT | {'accuracy': '0.686', 'gpu_used': True}
-2025-09-06 18:45:37 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for MSFT | {'accuracy': '0.682', 'gpu_used': True}
-2025-09-06 18:45:38 | INFO     | utils.logger:info:48 - Neural Network trained for MSFT | {'accuracy': '0.591'}
-2025-09-06 18:45:41 | INFO     | utils.logger:info:48 - Ensemble model trained for MSFT | {'accuracy': '0.686'}
-2025-09-06 18:45:41 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for MSFT | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:41 | SUCCESS  | utils.logger:success:78 - Advanced models saved for MSFT
-2025-09-06 18:45:42 | INFO     | utils.logger:info:48 - XGBoost model trained for GOOGL | {'accuracy': '0.682', 'gpu_used': True}
-2025-09-06 18:45:42 | INFO     | utils.logger:info:48 - LightGBM model trained for GOOGL | {'accuracy': '0.607', 'gpu_used': True}
-2025-09-06 18:45:42 | INFO     | utils.logger:info:48 - Random Forest model trained for GOOGL | {'accuracy': '0.649'}
-2025-09-06 18:45:42 | SUCCESS  | utils.logger:success:76 - AI models trained for GOOGL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:42 | SUCCESS  | utils.logger:success:78 - Models saved for GOOGL
-2025-09-06 18:45:45 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for GOOGL | {'accuracy': '0.690', 'gpu_used': True}
-2025-09-06 18:45:47 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for GOOGL | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:45:48 | INFO     | utils.logger:info:48 - Neural Network trained for GOOGL | {'accuracy': '0.533'}
-2025-09-06 18:45:51 | INFO     | utils.logger:info:48 - Ensemble model trained for GOOGL | {'accuracy': '0.694'}
-2025-09-06 18:45:51 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for GOOGL | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:51 | SUCCESS  | utils.logger:success:78 - Advanced models saved for GOOGL
-2025-09-06 18:45:52 | INFO     | utils.logger:info:48 - XGBoost model trained for TSLA | {'accuracy': '0.752', 'gpu_used': True}
-2025-09-06 18:45:53 | INFO     | utils.logger:info:48 - LightGBM model trained for TSLA | {'accuracy': '0.657', 'gpu_used': True}
-2025-09-06 18:45:53 | INFO     | utils.logger:info:48 - Random Forest model trained for TSLA | {'accuracy': '0.665'}
-2025-09-06 18:45:53 | SUCCESS  | utils.logger:success:76 - AI models trained for TSLA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:45:53 | SUCCESS  | utils.logger:success:78 - Models saved for TSLA
-2025-09-06 18:45:55 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for TSLA | {'accuracy': '0.789', 'gpu_used': True}
-2025-09-06 18:45:58 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for TSLA | {'accuracy': '0.781', 'gpu_used': True}
-2025-09-06 18:45:59 | INFO     | utils.logger:info:48 - Neural Network trained for TSLA | {'accuracy': '0.727'}
-2025-09-06 18:46:02 | INFO     | utils.logger:info:48 - Ensemble model trained for TSLA | {'accuracy': '0.789'}
-2025-09-06 18:46:02 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for TSLA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:02 | SUCCESS  | utils.logger:success:78 - Advanced models saved for TSLA
-2025-09-06 18:46:03 | INFO     | utils.logger:info:48 - XGBoost model trained for AMZN | {'accuracy': '0.636', 'gpu_used': True}
-2025-09-06 18:46:03 | INFO     | utils.logger:info:48 - LightGBM model trained for AMZN | {'accuracy': '0.570', 'gpu_used': True}
-2025-09-06 18:46:03 | INFO     | utils.logger:info:48 - Random Forest model trained for AMZN | {'accuracy': '0.607'}
-2025-09-06 18:46:03 | SUCCESS  | utils.logger:success:76 - AI models trained for AMZN | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:03 | SUCCESS  | utils.logger:success:78 - Models saved for AMZN
-2025-09-06 18:46:06 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AMZN | {'accuracy': '0.649', 'gpu_used': True}
-2025-09-06 18:46:08 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for AMZN | {'accuracy': '0.624', 'gpu_used': True}
-2025-09-06 18:46:09 | INFO     | utils.logger:info:48 - Neural Network trained for AMZN | {'accuracy': '0.583'}
-2025-09-06 18:46:12 | INFO     | utils.logger:info:48 - Ensemble model trained for AMZN | {'accuracy': '0.669'}
-2025-09-06 18:46:12 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for AMZN | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:12 | SUCCESS  | utils.logger:success:78 - Advanced models saved for AMZN
-2025-09-06 18:46:13 | INFO     | utils.logger:info:48 - XGBoost model trained for NVDA | {'accuracy': '0.736', 'gpu_used': True}
-2025-09-06 18:46:14 | INFO     | utils.logger:info:48 - LightGBM model trained for NVDA | {'accuracy': '0.694', 'gpu_used': True}
-2025-09-06 18:46:14 | INFO     | utils.logger:info:48 - Random Forest model trained for NVDA | {'accuracy': '0.694'}
-2025-09-06 18:46:14 | SUCCESS  | utils.logger:success:76 - AI models trained for NVDA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:14 | SUCCESS  | utils.logger:success:78 - Models saved for NVDA
-2025-09-06 18:46:16 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for NVDA | {'accuracy': '0.715', 'gpu_used': True}
-2025-09-06 18:46:19 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for NVDA | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:46:20 | INFO     | utils.logger:info:48 - Neural Network trained for NVDA | {'accuracy': '0.591'}
-2025-09-06 18:46:23 | INFO     | utils.logger:info:48 - Ensemble model trained for NVDA | {'accuracy': '0.719'}
-2025-09-06 18:46:23 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for NVDA | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:23 | SUCCESS  | utils.logger:success:78 - Advanced models saved for NVDA
-2025-09-06 18:46:24 | INFO     | utils.logger:info:48 - XGBoost model trained for AMD | {'accuracy': '0.711', 'gpu_used': True}
-2025-09-06 18:46:24 | INFO     | utils.logger:info:48 - LightGBM model trained for AMD | {'accuracy': '0.632', 'gpu_used': True}
-2025-09-06 18:46:24 | INFO     | utils.logger:info:48 - Random Forest model trained for AMD | {'accuracy': '0.690'}
-2025-09-06 18:46:24 | SUCCESS  | utils.logger:success:76 - AI models trained for AMD | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:24 | SUCCESS  | utils.logger:success:78 - Models saved for AMD
-2025-09-06 18:46:26 | INFO     | utils.logger:info:48 - Advanced XGBoost trained for AMD | {'accuracy': '0.736', 'gpu_used': True}
-2025-09-06 18:46:29 | INFO     | utils.logger:info:48 - Advanced LightGBM trained for AMD | {'accuracy': '0.715', 'gpu_used': True}
-2025-09-06 18:46:30 | INFO     | utils.logger:info:48 - Neural Network trained for AMD | {'accuracy': '0.607'}
-2025-09-06 18:46:33 | INFO     | utils.logger:info:48 - Ensemble model trained for AMD | {'accuracy': '0.736'}
-2025-09-06 18:46:33 | SUCCESS  | utils.logger:success:76 - Advanced AI models trained for AMD | {'data_size': 964, 'feature_count': 108, 'gpu_used': True}
-2025-09-06 18:46:33 | SUCCESS  | utils.logger:success:78 - Advanced models saved for AMD
+2025-09-12 17:34:32 | INFO     | utils.logger:info:49 - Alpaca client initialized with rate limiting | {'base_url': 'https://paper-api.alpaca.markets', 'key_fingerprint': 'PKW5...3D1Z', 'max_calls_per_minute': 150, 'official_limit': '200 requests/minute'}
+2025-09-12 17:34:39 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:51 - MLflow tracking initialized
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - AI-Enhanced Strategy initialized | {'ai_weight': 0.6, 'momentum_weight': 0.4, 'gpu_available': True}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Strategy Intelligence initialized | {'strategy_count': 5, 'switch_cooldown': 30}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - News Anchor initialized | {'anchor_name': 'AI Market Reporter'}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Trading bot initialized | {'strategy': 'Adaptive Strategy Intelligence'}
+2025-09-12 17:34:40 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:51 - MLflow tracking initialized
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - AI-Enhanced Strategy initialized | {'ai_weight': 0.6, 'momentum_weight': 0.4, 'gpu_available': True}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Strategy Intelligence initialized | {'strategy_count': 5, 'switch_cooldown': 30}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - News Anchor initialized | {'anchor_name': 'AI Market Reporter'}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Trading bot initialized | {'strategy': 'Adaptive Strategy Intelligence'}
+2025-09-12 17:34:41 | SUCCESS  | utils.logger:success:77 - Alpaca connection successful | {'account_id': '41eedbc8-e9d1-4671-a2bc-d5a4ead1525b', 'status': 'ACTIVE', 'cash': '$7931.92', 'portfolio_value': '$10029.87'}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Scheduling timezone-aware trading | {'nyse_open_et': '09:30', 'nyse_close_et': '16:00', 'nyse_open_nl': '15:30', 'nyse_close_nl': '22:00', 'netherlands_tz': 'Europe/Amsterdam'}
+2025-09-12 17:34:41 | INFO     | utils.logger:info:51 - Timezone-aware trading jobs scheduled
+2025-09-12 17:34:41 | SUCCESS  | utils.logger:success:79 - Trading bot started successfully with timezone-aware scheduling
+2025-09-12 17:34:41 | INFO     | utils.logger:info:49 - Market is currently open | {'closes_at': '16:00 (New York time) / 22:00 (Netherlands time)', 'time_until_close': '4h 25m'}
+2025-09-12 17:34:52 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 329}
+2025-09-12 17:36:53 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:36:53 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:37:04 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 319}
+2025-09-12 17:39:05 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:39:05 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:39:16 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 318}
+2025-09-12 17:41:16 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:41:16 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:41:27 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 17:43:28 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:43:28 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:43:39 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 321}
+2025-09-12 17:45:40 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:45:40 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:45:51 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 334}
+2025-09-12 17:47:52 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:47:52 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:48:02 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 314}
+2025-09-12 17:50:03 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:50:03 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:50:14 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 17:52:15 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:52:15 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:52:26 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 312}
+2025-09-12 17:54:26 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:54:26 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:54:37 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 329}
+2025-09-12 17:56:38 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:56:38 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:56:49 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 315}
+2025-09-12 17:58:49 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 17:58:49 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 17:59:01 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 18:01:01 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:01:01 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:01:13 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 338}
+2025-09-12 18:03:13 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:03:13 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:03:25 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 335}
+2025-09-12 18:05:25 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:05:25 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:05:36 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 321}
+2025-09-12 18:07:37 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:07:37 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:07:48 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 335}
+2025-09-12 18:09:49 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:09:49 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:10:00 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 320}
+2025-09-12 18:12:01 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:12:01 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:12:12 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 18:14:12 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:14:12 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:14:24 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 329}
+2025-09-12 18:16:24 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:16:24 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:16:35 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 18:18:36 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:18:36 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:18:47 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 317}
+2025-09-12 18:20:47 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:20:47 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:20:59 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 18:22:59 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:22:59 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:23:10 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 320}
+2025-09-12 18:25:11 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:25:11 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:25:22 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 313}
+2025-09-12 18:27:22 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:27:22 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:27:33 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 326}
+2025-09-12 18:29:34 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:29:34 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:29:45 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 18:31:46 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:31:46 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:31:57 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 324}
+2025-09-12 18:33:58 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:33:58 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:34:09 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 326}
+2025-09-12 18:36:09 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:36:09 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:36:20 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 319}
+2025-09-12 18:38:21 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:38:21 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:38:32 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 328}
+2025-09-12 18:40:33 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:40:33 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:40:44 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 336}
+2025-09-12 18:42:45 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:42:45 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:42:56 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 18:44:57 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:44:57 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:45:08 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 332}
+2025-09-12 18:47:09 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:47:09 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:47:20 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 18:49:21 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:49:21 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:49:32 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 337}
+2025-09-12 18:51:33 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:51:33 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:51:44 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 321}
+2025-09-12 18:53:44 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:53:44 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:53:55 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 18:55:56 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:55:56 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:56:07 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 18:58:08 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 18:58:08 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 18:58:19 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 316}
+2025-09-12 19:00:19 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:00:19 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:00:30 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 19:02:31 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:02:31 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:02:42 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 331}
+2025-09-12 19:04:43 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:04:43 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:04:54 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 19:06:55 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:06:55 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:07:06 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 336}
+2025-09-12 19:09:07 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:09:07 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:09:18 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 308}
+2025-09-12 19:11:18 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:11:18 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:11:29 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 19:13:30 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:13:30 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:13:41 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 19:15:42 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:15:42 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:15:53 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 19:17:53 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:17:53 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:18:04 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 324}
+2025-09-12 19:20:05 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:20:05 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:20:16 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 328}
+2025-09-12 19:22:17 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:22:17 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:22:28 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 335}
+2025-09-12 19:24:29 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:24:29 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:24:40 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 335}
+2025-09-12 19:26:41 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:26:41 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:26:52 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 315}
+2025-09-12 19:28:53 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:28:53 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:29:03 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 320}
+2025-09-12 19:31:04 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:31:04 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:31:15 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 19:33:16 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:33:16 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:33:27 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 340}
+2025-09-12 19:35:28 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:35:28 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:35:39 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 331}
+2025-09-12 19:37:40 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:37:40 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:37:51 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 19:39:52 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:39:52 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:40:03 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 19:42:04 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:42:04 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:42:15 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 335}
+2025-09-12 19:44:16 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:44:16 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:44:27 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 19:46:28 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:46:28 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:46:39 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 319}
+2025-09-12 19:48:39 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:48:39 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:48:50 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 19:50:51 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:50:51 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:51:02 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 329}
+2025-09-12 19:53:03 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:53:03 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:53:14 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 309}
+2025-09-12 19:55:14 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:55:14 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:55:25 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 19:57:26 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:57:26 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:57:37 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 328}
+2025-09-12 19:59:38 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 19:59:38 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 19:59:49 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 20:01:50 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:01:50 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:02:01 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 325}
+2025-09-12 20:04:01 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:04:01 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:04:12 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 323}
+2025-09-12 20:06:13 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:06:13 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:06:24 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 315}
+2025-09-12 20:08:25 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:08:25 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:08:36 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 324}
+2025-09-12 20:10:36 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:10:36 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:10:47 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 316}
+2025-09-12 20:12:48 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:12:48 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:12:59 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 20:15:00 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:15:00 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:15:11 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 336}
+2025-09-12 20:17:12 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:17:12 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:17:23 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 20:19:24 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:19:24 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:19:35 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 328}
+2025-09-12 20:21:36 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:21:36 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:21:47 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 332}
+2025-09-12 20:23:47 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:23:47 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:23:59 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 324}
+2025-09-12 20:25:59 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:25:59 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:26:10 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 328}
+2025-09-12 20:28:11 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:28:11 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:28:22 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 20:30:23 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:30:23 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:30:34 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 325}
+2025-09-12 20:32:35 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:32:35 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:32:46 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 325}
+2025-09-12 20:34:46 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:34:46 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:34:57 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 318}
+2025-09-12 20:36:58 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:36:58 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:37:09 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 333}
+2025-09-12 20:39:10 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:39:10 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:39:21 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 317}
+2025-09-12 20:41:21 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:41:21 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:41:32 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 316}
+2025-09-12 20:43:33 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:43:33 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:43:44 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 330}
+2025-09-12 20:45:45 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:45:45 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:45:56 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 325}
+2025-09-12 20:47:57 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:47:57 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:48:07 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 320}
+2025-09-12 20:50:08 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:50:08 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:50:19 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 322}
+2025-09-12 20:52:20 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:52:20 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:52:31 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 337}
+2025-09-12 20:54:32 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:54:32 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:54:43 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 327}
+2025-09-12 20:56:44 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:56:44 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:56:55 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 325}
+2025-09-12 20:58:55 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 20:58:55 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 20:59:07 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 329}
+2025-09-12 21:01:07 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:01:07 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:01:18 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 318}
+2025-09-12 21:03:19 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:03:19 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:03:30 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 336}
+2025-09-12 21:05:31 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:05:31 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:05:42 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 326}
+2025-09-12 21:07:43 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:07:43 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:07:54 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 318}
+2025-09-12 21:09:54 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:09:54 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:10:06 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 338}
+2025-09-12 21:12:06 | WARNING  | utils.logger:warning:56 - Trading blocked | {'failed_checks': ['max_positions']}
+2025-09-12 21:12:06 | WARNING  | utils.logger:warning:56 - Trading blocked by risk management | {'failed_checks': ['max_positions']}
+2025-09-12 21:12:17 | INFO     | utils.logger:info:49 - News Update Delivered | {'update_length': 313}
+2025-09-13 12:05:17 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:17 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:05:17 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:17 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:05:17 | ERROR    | utils.logger:error:65 - Hybrid acceleration test failed: 'int' object does not support item assignment
+2025-09-13 12:05:31 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:31 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:05:31 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:31 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:05:31 | ERROR    | utils.logger:error:65 - Hybrid acceleration test failed: 'int' object does not support item assignment
+2025-09-13 12:05:46 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:46 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:05:57 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:05:57 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:07 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:06:07 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:07 | WARNING  | utils.logger:warning:58 - Insufficient data for training TEST
+2025-09-13 12:06:20 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:06:20 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:21 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:06:21 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:21 | ERROR    | utils.logger:error:65 - Hybrid acceleration test failed: 'HybridAIEngine' object has no attribute '_train_gpu_models'
+2025-09-13 12:06:30 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:06:30 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:30 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:06:30 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:06:33 | INFO     | utils.logger:info:49 - Hybrid training completed for TEST | {'models_trained': 2, 'hardware_usage': {'gpu': 2, 'npu': 0, 'cpu': 0}}
+2025-09-13 12:24:11 | INFO     | utils.logger:info:49 - Current state loaded | {'stocks_count': 0}
+2025-09-13 12:24:11 | INFO     | utils.logger:info:49 - S&P 500 Manager initialized | {'current_stocks': 0, 'data_dir': 'data/sp500'}
+2025-09-13 12:24:30 | INFO     | utils.logger:info:51 - Starting S&P 500 data collection...
+2025-09-13 12:24:30 | INFO     | utils.logger:info:51 - Starting full S&P 500 update cycle...
+2025-09-13 12:24:30 | INFO     | utils.logger:info:51 - Updating S&P 500 constituents...
+2025-09-13 12:24:30 | ERROR    | utils.logger:error:65 - Wikipedia fetch error: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-09-13 12:24:30 | ERROR    | utils.logger:error:65 - Yahoo Finance fetch error: 429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v1/finance/screener?formatted=true&lang=en-US&region=US&sort=market_cap&count=500&corsDomain=finance.yahoo.com
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Fetched 501 stocks from MarketBeat
+2025-09-13 12:24:31 | INFO     | utils.logger:info:49 - S&P 500 fetch completed | {'total_found': 501, 'validated': 500, 'sources_used': ['marketbeat']}
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Current state saved
+2025-09-13 12:24:31 | INFO     | utils.logger:info:49 - S&P 500 constituents updated | {'total_stocks': 500, 'new_stocks': ['AJG', 'PCG', 'MDLZ', 'OXY', 'KLA', 'CAG', 'MAA', 'CBRE', 'NXPI', 'UNP', 'FIS', 'ICE', 'DECK', 'SJM', 'INTU', 'FRT', 'NDSN', 'PGR', 'WDC', 'HAL', 'ULTA', 'GILD', 'VRSN', 'AAL', 'AIZ', 'CEO', 'CSX', 'DOW', 'AAPL', 'DGX', 'HUM', 'LYV', 'NDAQ', 'APA', 'PFG', 'AON', 'PANW', 'AMGN', 'ESG', 'BATS', 'EQIX', 'BMO', 'BDX', 'BIO', 'KVUE', 'ADM', 'UHS', 'CSV', 'AMT', 'UTC', 'LON', 'COST', 'BBY', 'TGT', 'WEC', 'PAYC', 'HRL', 'KIM', 'MTCH', 'HSIC', 'CCL', 'MSI', 'LOW', 'SPGI', 'VLO', 'QRVO', 'MCHP', 'DLR', 'CNC', 'PAYX', 'OKE', 'UDR', 'MNST', 'WTW', 'MINW', 'CDW', 'SBAC', 'MKC', 'CMA', 'NOW', 'TRV', 'SYY', 'AME', 'JNJ', 'ALLE', 'MTD', 'TPR', 'AVGO', 'TFC', 'PEP', 'PPG', 'DJT', 'ETF', 'PODD', 'PNW', 'HSY', 'DAY', 'PYPL', 'HLT', 'PNR', 'LNT', 'THALM', 'IQVIA', 'FDX', 'PLC', 'MKTX', 'ROK', 'CZR', 'WELL', 'CHRW', 'PSX', 'PHM', 'STX', 'NVR', 'WAT', 'TJX', 'MRK', 'UAL', 'IRA', 'FAANG', 'ADP', 'AMCR', 'ANET', 'AVY', 'DOV', 'SNA', 'EOG', 'IQV', 'COVID', 'USB', 'BAC', 'TTWO', 'ALL', 'MAS', 'HUBB', 'ACN', 'SMCI', 'CPU', 'TSXV', 'IBM', 'FANG', 'ELV', 'TFX', 'CSR', 'SYK', 'NKE', 'TECH', 'FDA', 'FXAIX', 'INVH', 'RSI', 'NVDA', 'VTRS', 'ENPH', 'XOM', 'BBWI', 'OTC', 'KMX', 'SWK', 'MLM', 'VICI', 'LKQ', 'ABBV', 'NUE', 'CSCO', 'CVE', 'FICO', 'FTNT', 'CMCSA', 'MCD', 'JCI', 'HIG', 'WST', 'NCLH', 'ABNB', 'GNRC', 'VTR', 'PSA', 'ALB', 'REGN', 'IFF', 'CVS', 'GWW', 'AIG', 'HST', 'KEY', 'BLDR', 'YUM', 'CPT', 'NWS', 'SNPS', 'KMI', 'ADI', 'PNG', 'CAT', 'HAS', 'AXON', 'GEHC', 'ETSY', 'IPO', 'ZTS', 'ECL', 'CTVA', 'FOXA', 'WFC', 'RSG', 'UAA', 'LUMN', 'NRG', 'ORLY', 'ESS', 'META', 'DVN', 'SRE', 'HON', 'TMO', 'UPS', 'HBAN', 'RSS', 'EXC', 'DJIA', 'MPC', 'EMN', 'APH', 'GET', 'QCOM', 'CARR', 'AWK', 'IDEXX', 'USA', 'GEV', 'ACA', 'TSLA', 'NEM', 'ICONS', 'MGM', 'NXP', 'BKR', 'TROW', 'CCI', 'CLX', 'AST', 'MTB', 'KHC', 'CFG', 'CPB', 'CHD', 'MET', 'PWR', 'EQT', 'WMT', 'FAA', 'DLTR', 'SYF', 'ETN', 'LYB', 'ILMN', 'EXR', 'HII', 'NEE', 'NOC', 'IDEX', 'CMG', 'MOS', 'STE', 'PRU', 'LUV', 'AZO', 'CPRT', 'MDT', 'ALGN', 'JBL', 'VMC', 'NTRS', 'MPWR', 'CME', 'EQR', 'APTV', 'LVS', 'MAR', 'DPZ', 'NYSE', 'CHTR', 'REG', 'LDOS', 'HWM', 'ROST', 'SPG', 'DTE', 'AES', 'MCK', 'NWSA', 'IPG', 'ARE', 'ODFL', 'BRK', 'EXPD', 'SOLV', 'SHW', 'HRC', 'SCHW', 'ONEOK', 'CPAY', 'ROL', 'NFLX', 'AVB', 'SBA', 'DUK', 'ABT', 'TSN', 'LRCX', 'FAST', 'VLTO', 'WBD', 'CINF', 'AMD', 'JPM', 'BAX', 'FOX', 'CRL', 'GPN', 'LLY', 'EFX', 'PCAR', 'VOOG', 'HSBC', 'DAL', 'GOOG', 'TEL', 'CSGP', 'HPE', 'APD', 'GLW', 'SEC', 'AFL', 'ETR', 'CVX', 'AKAM', 'BEN', 'WYNN', 'KEYS', 'EBAY', 'INCY', 'HCA', 'CTRA', 'FTC', 'GEN', 'LSE', 'RVTY', 'FCX', 'IVZ', 'URI', 'BKNG', 'HPQ', 'KMB', 'JBHT', 'INTC', 'SWKS', 'III', 'COO', 'PTC', 'MSFT', 'XYL', 'NSC', 'LMT', 'PKG', 'MHK', 'CTSH', 'BALL', 'JPG', 'WMB', 'GOOGL', 'RTX', 'BRO', 'TER', 'CMS', 'TSE', 'DXCM', 'FTV', 'AEP', 'PLD', 'RCL', 'AMP', 'SLB', 'CDNS', 'KDP', 'SWPPX', 'ZBRA', 'OMC', 'TXN', 'GPC', 'AOS', 'CMI', 'FSLR', 'TSCO', 'COR', 'CTAS', 'ADBE', 'BMY', 'LIN', 'CRM', 'LHX', 'DVA', 'RMD', 'FAQ', 'ORCL', 'PGE', 'DHI', 'MMC', 'IEX', 'FDS', 'LLC', 'TRGP', 'DOC', 'SDPR', 'KLAC', 'TYL', 'RJF', 'BIIB', 'MSN', 'EVRG', 'NIKE', 'PPL', 'PNC', 'BLK', 'RMBS', 'ITW', 'TRMB', 'UBS', 'STT', 'EPS', 'FITB', 'MOH', 'PEG', 'VRSK', 'AMZN', 'WAB', 'STZ', 'BXP', 'MRNA', 'STLD', 'EMR', 'ROP', 'CEG', 'BTIG', 'EPAM', 'SBUX', 'GRMN', 'POOL', 'TXT', 'IDXX', 'XEL', 'BSX', 'EIX', 'LULU', 'JKHY', 'TSX', 'AMAT', 'DHR', 'UBER', 'CIBC', 'BWA', 'VRTX', 'TDG', 'DIS', 'LEN', 'GIS', 'RHI', 'CAH', 'COF', 'AXP', 'PFE', 'VUG', 'ZBH', 'TMUS', 'COP', 'FMC', 'OTIS', 'ISRG', 'ATO', 'UNH', 'CBOE', 'EXPE', 'DRI', 'MCO', 'IRM', 'FFIV', 'TDY', 'BMW', 'NTAP', 'CNP', 'ACGL', 'MSCI', 'ISI', 'HOLX', 'ADSK', 'WRB', 'AEE', 'TAP', 'MMM'], 'removed_stocks': [], 'new_count': 500, 'removed_count': 0, 'timestamp': '2025-09-13T12:24:31.747158'}
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Performance ranking calculated for 500 stocks
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Cleaned up data for 0 delisted stocks
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Found 500 training candidates
+2025-09-13 12:24:31 | INFO     | utils.logger:info:51 - Found 500 training candidates
+2025-09-13 12:24:31 | INFO     | utils.logger:info:49 - Full S&P 500 update cycle completed | {'duration': 1.1477453708648682, 'training_candidates': 500}
+2025-09-13 12:24:37 | INFO     | utils.logger:info:49 - Saved data for AJG | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:24:41 | INFO     | utils.logger:info:49 - Saved data for PCG | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:24:46 | INFO     | utils.logger:info:49 - Saved data for MDLZ | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:24:52 | INFO     | utils.logger:info:49 - Saved data for OXY | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:25:01 | INFO     | utils.logger:info:49 - Saved data for CAG | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:25:03 | INFO     | utils.logger:info:49 - Saved data for MAA | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:25:09 | INFO     | utils.logger:info:49 - Saved data for CBRE | {'timeframes': ['1d'], 'total_rows': 752}
+2025-09-13 12:26:37 | INFO     | utils.logger:info:49 - Current state loaded | {'stocks_count': 500}
+2025-09-13 12:26:37 | INFO     | utils.logger:info:49 - S&P 500 Manager initialized | {'current_stocks': 500, 'data_dir': 'data/sp500'}
+2025-09-13 12:26:37 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:26:37 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:26:37 | INFO     | utils.logger:info:51 - Starting full S&P 500 update cycle...
+2025-09-13 12:26:37 | INFO     | utils.logger:info:51 - Updating S&P 500 constituents...
+2025-09-13 12:26:37 | ERROR    | utils.logger:error:65 - Wikipedia fetch error: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-09-13 12:26:37 | ERROR    | utils.logger:error:65 - Yahoo Finance fetch error: 429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v1/finance/screener?formatted=true&lang=en-US&region=US&sort=market_cap&count=500&corsDomain=finance.yahoo.com
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Fetched 501 stocks from MarketBeat
+2025-09-13 12:26:38 | INFO     | utils.logger:info:49 - S&P 500 fetch completed | {'total_found': 501, 'validated': 500, 'sources_used': ['marketbeat']}
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Current state saved
+2025-09-13 12:26:38 | INFO     | utils.logger:info:49 - S&P 500 constituents updated | {'total_stocks': 500, 'new_stocks': [], 'removed_stocks': [], 'new_count': 0, 'removed_count': 0, 'timestamp': '2025-09-13T12:26:38.478248'}
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Performance ranking calculated for 500 stocks
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Cleaned up data for 0 delisted stocks
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Found 500 training candidates
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Found 500 training candidates
+2025-09-13 12:26:38 | INFO     | utils.logger:info:49 - Full S&P 500 update cycle completed | {'duration': 1.1024484634399414, 'training_candidates': 500}
+2025-09-13 12:26:38 | INFO     | utils.logger:info:51 - Updating S&P 500 constituents...
+2025-09-13 12:26:38 | ERROR    | utils.logger:error:65 - Wikipedia fetch error: 403 Client Error: Forbidden for url: https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-09-13 12:26:38 | ERROR    | utils.logger:error:65 - Yahoo Finance fetch error: 429 Client Error: Too Many Requests for url: https://query1.finance.yahoo.com/v1/finance/screener?formatted=true&lang=en-US&region=US&sort=market_cap&count=500&corsDomain=finance.yahoo.com
+2025-09-13 12:26:39 | INFO     | utils.logger:info:51 - Fetched 501 stocks from MarketBeat
+2025-09-13 12:26:39 | INFO     | utils.logger:info:49 - S&P 500 fetch completed | {'total_found': 501, 'validated': 500, 'sources_used': ['marketbeat']}
+2025-09-13 12:26:39 | INFO     | utils.logger:info:51 - Current state saved
+2025-09-13 12:26:39 | INFO     | utils.logger:info:49 - S&P 500 constituents updated | {'total_stocks': 500, 'new_stocks': [], 'removed_stocks': [], 'new_count': 0, 'removed_count': 0, 'timestamp': '2025-09-13T12:26:39.465862'}
+2025-09-13 12:26:39 | INFO     | utils.logger:info:51 - Found 500 training candidates
+2025-09-13 12:26:41 | INFO     | utils.logger:info:49 - Hybrid training completed for CAG | {'models_trained': 2, 'hardware_usage': {'gpu': 2, 'npu': 0, 'cpu': 0}}
+2025-09-13 12:29:48 | INFO     | utils.logger:info:49 - Alpaca client initialized with rate limiting | {'base_url': 'https://paper-api.alpaca.markets', 'key_fingerprint': 'PKW5...3D1Z', 'max_calls_per_minute': 150, 'official_limit': '200 requests/minute'}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:51 - MLflow tracking initialized
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - AI Engine initialized | {'gpu_available': True, 'gpu_params': {'xgboost': {'tree_method': 'gpu_hist', 'gpu_id': 0, 'predictor': 'gpu_predictor'}, 'lightgbm': {'device': 'gpu', 'gpu_platform_id': 0, 'gpu_device_id': 0}}}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - AI-Enhanced Strategy initialized | {'ai_weight': 0.6, 'momentum_weight': 0.4, 'gpu_available': True}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Enhanced Momentum Strategy initialized | {'cooldown_symbol': 15, 'cooldown_global': 5}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Strategy Intelligence initialized | {'strategy_count': 5, 'switch_cooldown': 30}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - News Anchor initialized | {'anchor_name': 'AI Market Reporter'}
+2025-09-13 12:29:50 | INFO     | utils.logger:info:49 - Trading bot initialized | {'strategy': 'Adaptive Strategy Intelligence'}
+2025-09-13 12:29:52 | INFO     | utils.logger:info:49 - Current state loaded | {'stocks_count': 500}
+2025-09-13 12:29:52 | INFO     | utils.logger:info:49 - S&P 500 Manager initialized | {'current_stocks': 500, 'data_dir': 'data/sp500'}
+2025-09-13 12:29:52 | INFO     | utils.logger:info:51 - MLflow tracking initialized for hybrid models
+2025-09-13 12:29:52 | INFO     | utils.logger:info:49 - Hybrid AI Engine initialized | {'gpu_available': True, 'npu_available': False, 'hybrid_mode': False, 'workload_distribution': {'gpu_models': ['xgboost', 'lightgbm', 'catboost', 'neural_network'], 'npu_models': [], 'cpu_models': ['random_forest', 'data_preprocessing'], 'parallel_execution': False}}
+2025-09-13 12:29:52 | ERROR    | utils.logger:error:65 - Component initialization failed: TradingBot.__init__() got an unexpected keyword argument 'ai_engine'
+2025-09-13 12:32:26 | INFO     | utils.logger:info:51 - Storage optimizer initialized
+2025-09-13 12:32:39 | INFO     | utils.logger:info:49 - File cleanup completed | {'files_deleted': 0, 'space_freed_gb': 0}
+2025-09-13 12:32:42 | INFO     | utils.logger:info:49 - Storage analysis completed | {'total_size_gb': 0.2306194445118308}
+2025-09-13 12:32:47 | INFO     | utils.logger:info:51 - Starting storage optimization...
+2025-09-13 12:32:47 | INFO     | utils.logger:info:49 - Storage analysis completed | {'total_size_gb': 0.23061964381486177}
+2025-09-13 12:32:51 | INFO     | utils.logger:info:49 - Compressed data\cache\comprehensive_data.pkl | {'original_size_mb': 57.17902755737305, 'compressed_size_mb': 33.005154609680176}
+2025-09-13 12:32:52 | INFO     | utils.logger:info:49 - Compressed data\historical\NVDA_5m_data.csv | {'original_size_mb': 5.717247009277344, 'compressed_size_mb': 2.3063488006591797}
+2025-09-13 12:32:52 | INFO     | utils.logger:info:49 - Compressed data\historical\AAPL_5m_data.csv | {'original_size_mb': 5.703341484069824, 'compressed_size_mb': 2.2900047302246094}
+2025-09-13 12:32:53 | INFO     | utils.logger:info:49 - Compressed data\historical\AMZN_5m_data.csv | {'original_size_mb': 5.695619583129883, 'compressed_size_mb': 2.2867183685302734}
+2025-09-13 12:32:53 | INFO     | utils.logger:info:49 - Compressed data\historical\GOOGL_5m_data.csv | {'original_size_mb': 5.693805694580078, 'compressed_size_mb': 2.2790346145629883}
+2025-09-13 12:32:53 | INFO     | utils.logger:info:49 - Compressed data\historical\AMD_5m_data.csv | {'original_size_mb': 5.682218551635742, 'compressed_size_mb': 2.302577018737793}
+2025-09-13 12:32:54 | INFO     | utils.logger:info:49 - Compressed data\historical\TSLA_5m_data.csv | {'original_size_mb': 5.648681640625, 'compressed_size_mb': 2.3073015213012695}
+2025-09-13 12:32:54 | INFO     | utils.logger:info:49 - Compressed data\historical\MSFT_5m_data.csv | {'original_size_mb': 5.64362907409668, 'compressed_size_mb': 2.274251937866211}
+2025-09-13 12:32:54 | INFO     | utils.logger:info:49 - Compressed data\historical\AAPL_1h_data.csv | {'original_size_mb': 4.261483192443848, 'compressed_size_mb': 1.7458810806274414}
+2025-09-13 12:32:55 | INFO     | utils.logger:info:49 - Compressed data\historical\GOOGL_1h_data.csv | {'original_size_mb': 4.26096248626709, 'compressed_size_mb': 1.7399225234985352}
+2025-09-13 12:32:55 | INFO     | utils.logger:info:49 - File compression completed | {'files_compressed': 10, 'space_saved_gb': 0.05170783307403326}
+2025-09-13 12:32:55 | INFO     | utils.logger:info:49 - File cleanup completed | {'files_deleted': 0, 'space_freed_gb': 0}
+2025-09-13 12:32:55 | INFO     | utils.logger:info:49 - Storage optimization completed | {'total_space_saved_gb': 0.05170783307403326}
+2025-09-13 12:33:00 | INFO     | utils.logger:info:49 - Storage analysis completed | {'total_size_gb': 0.1789140272885561}

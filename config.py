@@ -19,6 +19,14 @@ class Config:
     DAILY_LOSS_LIMIT = float(os.getenv('DAILY_LOSS_LIMIT', '500'))
     MAX_POSITIONS = int(os.getenv('MAX_POSITIONS', '5'))
     
+    # S&P 500 Configuration
+    USE_SP500_MODE = os.getenv('USE_SP500_MODE', 'True').lower() == 'true'
+    SP500_MAX_STOCKS = int(os.getenv('SP500_MAX_STOCKS', '500'))
+    SP500_TOP_PERFORMERS = int(os.getenv('SP500_TOP_PERFORMERS', '50'))
+    SP500_RETRAIN_DAYS = int(os.getenv('SP500_RETRAIN_DAYS', '7'))
+    SP500_CLEANUP_DELAY_DAYS = int(os.getenv('SP500_CLEANUP_DELAY_DAYS', '30'))
+    SP500_MIN_TRAINING_DATA_DAYS = int(os.getenv('SP500_MIN_TRAINING_DATA_DAYS', '252'))
+    
     # Strategy Configuration
     DEFAULT_STRATEGY = os.getenv('DEFAULT_STRATEGY', 'momentum')
     RSI_PERIOD = int(os.getenv('RSI_PERIOD', '14'))
@@ -51,6 +59,22 @@ class Config:
     WASH_SALE_WINDOW_DAYS = int(os.getenv('WASH_SALE_WINDOW_DAYS', '30'))
     MIN_HOLDING_TIME_HOURS = int(os.getenv('MIN_HOLDING_TIME_HOURS', '1'))  # Minimum 1 hour holding
     
+    # AI/Hardware Configuration
+    USE_GPU = os.getenv('USE_GPU', 'True').lower() == 'true'
+    USE_NPU = os.getenv('USE_NPU', 'True').lower() == 'true'
+    USE_HYBRID_MODE = os.getenv('USE_HYBRID_MODE', 'True').lower() == 'true'
+    AI_ENGINE = os.getenv('AI_ENGINE', 'hybrid')  # 'standard', 'advanced', 'hybrid'
+    
+    # Model Configuration
+    MODEL_RETRAIN_HOURS = int(os.getenv('MODEL_RETRAIN_HOURS', '24'))
+    CONFIDENCE_THRESHOLD = float(os.getenv('CONFIDENCE_THRESHOLD', '0.7'))
+    MAX_MODELS_PER_SYMBOL = int(os.getenv('MAX_MODELS_PER_SYMBOL', '5'))
+    
+    # Hardware-specific settings
+    GPU_MEMORY_LIMIT = int(os.getenv('GPU_MEMORY_LIMIT', '4096'))  # MB
+    NPU_BATCH_SIZE = int(os.getenv('NPU_BATCH_SIZE', '32'))
+    CPU_THREADS = int(os.getenv('CPU_THREADS', '4'))
+    
     # Logging Configuration
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
     LOG_FILE = os.getenv('LOG_FILE', './logs/trading-bot.log')
@@ -71,6 +95,13 @@ class Config:
         print(f"   Symbols: {', '.join(cls.SYMBOLS)}")
         print(f"   Max Position Size: ${cls.MAX_POSITION_SIZE}")
         print(f"   Daily Loss Limit: ${cls.DAILY_LOSS_LIMIT}")
+        print(f"   AI Engine: {cls.AI_ENGINE}")
+        print(f"   GPU Enabled: {cls.USE_GPU}")
+        print(f"   NPU Enabled: {cls.USE_NPU}")
+        print(f"   Hybrid Mode: {cls.USE_HYBRID_MODE}")
+        print(f"   S&P 500 Mode: {cls.USE_SP500_MODE}")
+        if cls.USE_SP500_MODE:
+            print(f"   S&P 500 Top Performers: {cls.SP500_TOP_PERFORMERS}")
 
 # Global config instance
 config = Config()

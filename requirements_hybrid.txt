@@ -1,0 +1,39 @@
+# Core dependencies
+alpaca-trade-api>=2.3.0
+pandas>=1.5.0
+numpy>=1.21.0
+requests>=2.25.0
+python-dotenv>=0.19.0
+schedule>=1.1.0
+ta>=0.10.0
+yfinance>=0.1.70
+pytz>=2021.1
+loguru>=0.6.0
+
+# GPU-accelerated ML libraries
+xgboost>=1.7.0
+lightgbm>=3.3.0
+catboost>=1.2.0
+scikit-learn>=1.1.0
+joblib>=1.2.0
+mlflow>=1.28.0
+
+# NPU-accelerated ML libraries
+onnxruntime>=1.16.0
+onnxruntime-directml>=1.16.0  # AMD NPU support
+skl2onnx>=1.16.0  # Convert scikit-learn to ONNX
+torch>=2.0.0  # PyTorch for neural networks
+torch-directml>=0.2.0  # PyTorch DirectML support
+
+# Advanced ML libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Performance monitoring
+psutil>=5.9.0  # System monitoring
+GPUtil>=1.4.0  # GPU monitoring (if available)
+
+# Optional: Advanced NPU frameworks
+# openvino>=2023.0.0  # Intel OpenVINO (if using Intel NPU)
+# tensorflow>=2.13.0  # TensorFlow with NPU support

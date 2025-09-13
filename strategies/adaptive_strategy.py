@@ -303,11 +303,25 @@ class StrategyIntelligence:
             'market_metrics': market_conditions['metrics']
         })
         
-        # Log strategy intelligence
+        # Get symbol first
+        symbol = df['symbol'].iloc[0] if 'symbol' in df.columns else 'Unknown'
+        
+        # Generate AI-powered explanation with correct symbol
+        explanation = self._generate_ai_explanation(strategy_analysis, market_conditions, optimal_strategy_name, symbol)
+        trading_logger.decision(
+            action=strategy_analysis['signal'],
+            symbol=symbol,
+            explanation=explanation,
+            rsi=round(market_conditions['metrics']['rsi'], 1),
+            strength=round(strategy_analysis['strength'], 2),
+            regime=market_conditions['regime']
+        )
+        
+        # Log strategy intelligence (detailed)
         trading_logger.strategy(
             strategy_name=f"Adaptive Intelligence ({optimal_strategy_name})",
             signal=strategy_analysis['signal'],
-            symbol=df['symbol'].iloc[0] if 'symbol' in df.columns else 'Unknown',
+            symbol=symbol,
             strength=strategy_analysis['strength'],
             rsi=market_conditions['metrics']['rsi'],
             macd_histogram=0,  # Will be filled by strategy
@@ -319,6 +333,62 @@ class StrategyIntelligence:
         )
         
         return strategy_analysis
+    
+    def _generate_ai_explanation(self, strategy_analysis: Dict[str, Any], market_conditions: Dict[str, Any], strategy_name: str, symbol: str) -> str:
+        """Generate AI-powered explanation for trading decision"""
+        try:
+            # Get the AI engine from the strategy
+            ai_engine = None
+            for strategy_info in self.strategies.values():
+                if hasattr(strategy_info['strategy'], 'ai_engine'):
+                    ai_engine = strategy_info['strategy'].ai_engine
+                    break
+            
+            if ai_engine and hasattr(ai_engine, 'generate_explanation'):
+                # Get actual current price from dataframe
+                current_price = df['close'].iloc[-1] if len(df) > 0 else 0
+                
+                # Prepare market data for AI
+                market_data = {
+                    'current_price': current_price,
+                    'volume': market_conditions['metrics'].get('volume', 0),
+                    'regime': market_conditions['regime']
+                }
+                
+                # Prepare technical indicators
+                technical_indicators = market_conditions['metrics']
+                
+                # Generate AI explanation
+                explanation = ai_engine.generate_explanation(
+                    signal=strategy_analysis['signal'],
+                    symbol=symbol,
+                    market_data=market_data,
+                    technical_indicators=technical_indicators,
+                    confidence=market_conditions['confidence']
+                )
+                
+                return explanation
+            else:
+                # Fallback to simple explanation if AI engine not available
+                return self._generate_simple_explanation(strategy_analysis, market_conditions, strategy_name, symbol)
+                
+        except Exception as e:
+            trading_logger.error(f"Failed to generate AI explanation: {e}")
+            return self._generate_simple_explanation(strategy_analysis, market_conditions, strategy_name, symbol)
+    
+    def _generate_simple_explanation(self, strategy_analysis: Dict[str, Any], market_conditions: Dict[str, Any], strategy_name: str, symbol: str) -> str:
+        """Fallback simple explanation"""
+        signal = strategy_analysis['signal'].upper()
+        rsi = market_conditions['metrics']['rsi']
+        regime = market_conditions['regime']
+        confidence = market_conditions['confidence']
+        
+        if signal == 'BUY':
+            return f"🤖 BUYING {symbol} because our AI thinks it's a good deal! RSI {rsi:.1f}, {regime} market, {confidence*100:.0f}% sure."
+        elif signal == 'SELL':
+            return f"🤖 SELLING {symbol} because our AI thinks it's time to cash out! RSI {rsi:.1f}, {regime} market, {confidence*100:.0f}% sure."
+        else:
+            return f"🤖 WAITING on {symbol} because our AI isn't sure yet! RSI {rsi:.1f}, {regime} market, only {confidence*100:.0f}% sure."
     
     def record_trade(self, symbol: str, strategy_used: str, profit_loss: float = 0):
         """Record trade performance for strategy optimization"""

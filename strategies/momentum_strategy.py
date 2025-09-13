@@ -20,14 +20,14 @@ class MomentumStrategy:
         self.symbol_cooldown_minutes = 15  # 15 minutes per symbol
         self.global_cooldown_minutes = 5   # 5 minutes between any trades
         
-        # Signal confirmation settings
-        self.require_rsi_confirmation = True
-        self.require_macd_confirmation = True
-        self.require_trend_confirmation = True
+        # Signal confirmation settings (More aggressive - less confirmation required)
+        self.require_rsi_confirmation = False  # Disabled for more aggressive trading
+        self.require_macd_confirmation = False  # Disabled for more aggressive trading
+        self.require_trend_confirmation = False  # Disabled for more aggressive trading
         
-        # RSI thresholds for confirmation
-        self.rsi_oversold = 30
-        self.rsi_overbought = 70
+        # RSI thresholds for confirmation (More aggressive)
+        self.rsi_oversold = 40  # Raised from 30 - buy more often
+        self.rsi_overbought = 60  # Lowered from 70 - sell more often
         
         # ADX threshold for trend confirmation
         self.adx_trend_threshold = 25
@@ -298,70 +298,76 @@ class MomentumStrategy:
         if price_change_1h < -0.01 or price_change_3h < -0.015:
             buy_low_conditions.append(f"Recent drop: {price_change_1h:.1%}/{price_change_3h:.1%}")
         
-        # Condition 2: RSI approaching oversold (more lenient)
-        if current_rsi < 45:  # More lenient than 50
+        # Condition 2: RSI approaching oversold (very aggressive)
+        if current_rsi < 55:  # Much more lenient - buy more often
             buy_low_conditions.append(f"RSI low: {current_rsi:.1f}")
         
-        # Condition 3: Negative momentum (more lenient)
-        if momentum_score < 0:
-            buy_low_conditions.append(f"Negative momentum: {momentum_score:.3f}")
+        # Condition 3: Any momentum (very aggressive)
+        if momentum_score < 0.1:  # Buy on any negative or low momentum
+            buy_low_conditions.append(f"Momentum: {momentum_score:.3f}")
         
-        # Condition 4: Moderate volatility
-        if price_volatility > 0.01:  # Lower threshold
+        # Condition 4: Any volatility (very aggressive)
+        if price_volatility > 0.005:  # Much lower threshold
             buy_low_conditions.append(f"Volatility: {price_volatility:.1%}")
         
-        # Condition 5: Downtrend over longer period
-        if price_change_6h < -0.02:
+        # Condition 5: Any downtrend (very aggressive)
+        if price_change_6h < -0.005:  # Much more sensitive
             buy_low_conditions.append(f"Downtrend: {price_change_6h:.1%}")
         
-        # Condition 6: RSI oversold (traditional)
-        if current_rsi < 35:
+        # Condition 6: RSI oversold (very aggressive)
+        if current_rsi < 50:  # Much more lenient
             buy_low_conditions.append(f"RSI oversold: {current_rsi:.1f}")
+        
+        # Condition 7: General buy signal (always add this)
+        buy_low_conditions.append("General bullish opportunity")
         
         # SMART SELL HIGH DETECTION - Mirror of buy low logic
         sell_high_conditions = []
         
-        # Condition 1: Recent rise (more than 1% in recent periods)
-        if price_change_1h > 0.01 or price_change_3h > 0.015:
+        # Condition 1: Recent rise (very aggressive)
+        if price_change_1h > 0.005 or price_change_3h > 0.01:  # Much more sensitive
             sell_high_conditions.append(f"Recent rise: {price_change_1h:.1%}/{price_change_3h:.1%}")
         
-        # Condition 2: RSI approaching overbought (more lenient)
-        if current_rsi > 55:  # More lenient than 70
+        # Condition 2: RSI approaching overbought (very aggressive)
+        if current_rsi > 45:  # Much more lenient - sell more often
             sell_high_conditions.append(f"RSI high: {current_rsi:.1f}")
         
-        # Condition 3: Positive momentum (more lenient)
-        if momentum_score > 0:
-            sell_high_conditions.append(f"Positive momentum: {momentum_score:.3f}")
+        # Condition 3: Any positive momentum (very aggressive)
+        if momentum_score > -0.1:  # Sell on any positive or neutral momentum
+            sell_high_conditions.append(f"Momentum: {momentum_score:.3f}")
         
-        # Condition 4: Moderate volatility
-        if price_volatility > 0.01:  # Same threshold as buy
+        # Condition 4: Any volatility (very aggressive)
+        if price_volatility > 0.005:  # Much lower threshold
             sell_high_conditions.append(f"Volatility: {price_volatility:.1%}")
         
-        # Condition 5: Uptrend over longer period
-        if price_change_6h > 0.02:
+        # Condition 5: Any uptrend (very aggressive)
+        if price_change_6h > 0.005:  # Much more sensitive
             sell_high_conditions.append(f"Uptrend: {price_change_6h:.1%}")
         
-        # Condition 6: RSI overbought (traditional)
-        if current_rsi > 65:
+        # Condition 6: RSI overbought (very aggressive)
+        if current_rsi > 50:  # Much more lenient
             sell_high_conditions.append(f"RSI overbought: {current_rsi:.1f}")
         
-        # SMART BUY LOW SIGNAL
-        if len(buy_low_conditions) >= 2:
+        # Condition 7: General sell signal (always add this)
+        sell_high_conditions.append("General bearish opportunity")
+        
+        # SMART BUY LOW SIGNAL (More aggressive)
+        if len(buy_low_conditions) >= 1:  # Lowered from 2 to 1
             signal = 'buy'
             reason = f"SMART BUY LOW: {' | '.join(buy_low_conditions)}"
             combined_strength = 0.7  # Strong buy signal
-        elif len(buy_low_conditions) >= 1:
+        elif len(buy_low_conditions) >= 0:  # Even more aggressive - buy on any hint
             signal = 'buy'
-            reason = f"BUY LOW: {' | '.join(buy_low_conditions)}"
+            reason = f"AGGRESSIVE BUY: {' | '.join(buy_low_conditions) if buy_low_conditions else 'General bullish sentiment'}"
             combined_strength = 0.5  # Moderate buy signal
-        # SMART SELL HIGH SIGNAL
-        elif len(sell_high_conditions) >= 2:
+        # SMART SELL HIGH SIGNAL (More aggressive)
+        elif len(sell_high_conditions) >= 1:  # Lowered from 2 to 1
             signal = 'sell'
             reason = f"SMART SELL HIGH: {' | '.join(sell_high_conditions)}"
             combined_strength = -0.7  # Strong sell signal
-        elif len(sell_high_conditions) >= 1:
+        elif len(sell_high_conditions) >= 0:  # Even more aggressive - sell on any hint
             signal = 'sell'
-            reason = f"SELL HIGH: {' | '.join(sell_high_conditions)}"
+            reason = f"AGGRESSIVE SELL: {' | '.join(sell_high_conditions) if sell_high_conditions else 'General bearish sentiment'}"
             combined_strength = -0.5  # Moderate sell signal
         else:
             # Fallback to original logic for other cases
@@ -387,19 +393,19 @@ class MomentumStrategy:
         # AGGRESSIVE: Weight momentum more heavily for faster signals
         combined_strength = (technical_strength * 0.5) + (momentum_score * 0.5)
         
-        # MICRO-MOVEMENT: Ultra-sensitive thresholds for small movements
-        if combined_strength > 0.02:  # React to 0.02% movements
+        # MICRO-MOVEMENT: Ultra-sensitive thresholds for small movements (Very aggressive)
+        if combined_strength > 0.001:  # React to 0.001% movements (much more sensitive)
             signal = 'buy'
             reason = f"MICRO-MOVEMENT: Bullish micro-momentum (strength: {combined_strength:.4f})"
-        elif combined_strength < -0.02:  # React to -0.02% movements
+        elif combined_strength < -0.001:  # React to -0.001% movements (much more sensitive)
             signal = 'sell'
             reason = f"MICRO-MOVEMENT: Bearish micro-momentum (strength: {combined_strength:.4f})"
-        elif combined_strength > 0.005:  # React to 0.005% movements
+        elif combined_strength > 0:  # Any positive movement
             signal = 'buy'
-            reason = f"MICRO-MOVEMENT: Weak bullish micro-momentum (strength: {combined_strength:.4f})"
-        elif combined_strength < -0.005:  # React to -0.005% movements
+            reason = f"MICRO-MOVEMENT: Any bullish movement (strength: {combined_strength:.4f})"
+        elif combined_strength < 0:  # Any negative movement
             signal = 'sell'
-            reason = f"MICRO-MOVEMENT: Weak bearish micro-momentum (strength: {combined_strength:.4f})"
+            reason = f"MICRO-MOVEMENT: Any bearish movement (strength: {combined_strength:.4f})"
         else:
             signal = 'neutral'
             reason = f"Neutral micro-momentum (strength: {combined_strength:.4f})"

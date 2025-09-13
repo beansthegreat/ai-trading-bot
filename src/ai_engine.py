@@ -540,6 +540,59 @@ class AIEngine:
         except Exception as e:
             trading_logger.error(f"Failed to load models for {symbol}: {e}")
     
+    def generate_explanation(self, signal: str, symbol: str, market_data: Dict[str, Any], 
+                           technical_indicators: Dict[str, Any], confidence: float) -> str:
+        """Generate AI-powered natural language explanation for trading decision"""
+        try:
+            # Extract key metrics
+            rsi = technical_indicators.get('rsi', 50)
+            price = market_data.get('current_price', 0)
+            volume = market_data.get('volume', 0)
+            market_regime = market_data.get('regime', 'unknown')
+            
+            # Create context for AI explanation
+            context = {
+                'signal': signal.upper(),
+                'symbol': symbol,
+                'rsi': round(rsi, 1),
+                'price': round(price, 2),
+                'volume': volume,
+                'market_regime': market_regime,
+                'confidence': round(confidence, 2)
+            }
+            
+            # Generate simple, easy-to-understand explanations
+            if signal.upper() == 'BUY':
+                if rsi < 30:
+                    explanation = f"🤖 BUYING {symbol} because it's super cheap right now! RSI is {rsi:.1f} (like a 70% off sale). Price: ${price:.2f}. We're {confidence*100:.0f}% sure this is a good deal. Market is {market_regime}."
+                elif rsi < 50:
+                    explanation = f"🤖 BUYING {symbol} because it's at a good price! RSI is {rsi:.1f} (not too expensive, not too cheap). Price: ${price:.2f}. We're {confidence*100:.0f}% confident. Market is {market_regime}."
+                else:
+                    explanation = f"🤖 BUYING {symbol} because it's going up fast! RSI is {rsi:.1f} (like catching a wave). Price: ${price:.2f}. We're {confidence*100:.0f}% sure it'll keep going up. Market is {market_regime}."
+                    
+            elif signal.upper() == 'SELL':
+                if rsi > 70:
+                    explanation = f"🤖 SELLING {symbol} because it's way too expensive! RSI is {rsi:.1f} (like paying $100 for something worth $30). Price: ${price:.2f}. We're {confidence*100:.0f}% sure it'll drop soon. Market is {market_regime}."
+                else:
+                    explanation = f"🤖 SELLING {symbol} because it's starting to go down! RSI is {rsi:.1f}. Price: ${price:.2f}. We're {confidence*100:.0f}% sure it's time to take our money and run. Market is {market_regime}."
+                    
+            else:  # NEUTRAL/HOLD
+                if rsi > 70:
+                    explanation = f"🤖 WAITING on {symbol} because it's too expensive! RSI is {rsi:.1f} (like waiting for Black Friday sales). Price: ${price:.2f}. We're only {confidence*100:.0f}% sure. Market is {market_regime}."
+                elif rsi < 30:
+                    explanation = f"🤖 WAITING on {symbol} because even though it's cheap (RSI {rsi:.1f}), we need more proof it won't keep going down. Price: ${price:.2f}. We're only {confidence*100:.0f}% sure. Market is {market_regime}."
+                else:
+                    explanation = f"🤖 WAITING on {symbol} because nothing exciting is happening! RSI is {rsi:.1f} (like waiting for a good movie to start). Price: ${price:.2f}. We're only {confidence*100:.0f}% sure. Market is {market_regime}."
+            
+            # Add AI signature
+            explanation += f" [AI Analysis: {self.name}]"
+            
+            return explanation
+            
+        except Exception as e:
+            trading_logger.error(f"Failed to generate AI explanation: {e}")
+            return f"🤖 AI Decision: {signal.upper()} {symbol} - AI analysis in progress..."
+    
     def get_performance_summary(self) -> Dict[str, Any]:
         """Get performance summary of all models"""
         return {
