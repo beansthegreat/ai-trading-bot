@@ -75,6 +75,13 @@ class Config:
     NPU_BATCH_SIZE = int(os.getenv('NPU_BATCH_SIZE', '32'))
     CPU_THREADS = int(os.getenv('CPU_THREADS', '4'))
     
+    # Live Data Configuration (NEW - replaces large data downloads)
+    USE_LIVE_DATA = os.getenv('USE_LIVE_DATA', 'True').lower() == 'true'  # Use live API data
+    LIVE_DATA_CACHE_SIZE = int(os.getenv('LIVE_DATA_CACHE_SIZE', '100'))  # Max cached symbols
+    LIVE_DATA_TTL_MINUTES = int(os.getenv('LIVE_DATA_TTL_MINUTES', '5'))  # Cache lifetime
+    USE_ALPACA_DATA = os.getenv('USE_ALPACA_DATA', 'False').lower() == 'true'  # Use Alpaca data
+    DEFAULT_LOOKBACK_BARS = int(os.getenv('DEFAULT_LOOKBACK_BARS', '100'))  # Bars to fetch
+
     # Logging Configuration
     LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
     LOG_FILE = os.getenv('LOG_FILE', './logs/trading-bot.log')
@@ -102,6 +109,9 @@ class Config:
         print(f"   S&P 500 Mode: {cls.USE_SP500_MODE}")
         if cls.USE_SP500_MODE:
             print(f"   S&P 500 Top Performers: {cls.SP500_TOP_PERFORMERS}")
+        print(f"   Live Data Enabled: {cls.USE_LIVE_DATA}")
+        if cls.USE_LIVE_DATA:
+            print(f"   Live Data Cache: {cls.LIVE_DATA_CACHE_SIZE} symbols, {cls.LIVE_DATA_TTL_MINUTES}min TTL")
 
 # Global config instance
 config = Config()

@@ -10,6 +10,7 @@ from utils.logger import trading_logger
 from utils.alpaca_client import alpaca_client
 from utils.risk_management import risk_manager
 from utils.news_anchor import NewsAnchor
+from utils.live_data_manager import live_data_manager
 from strategies.adaptive_strategy import StrategyIntelligence
 
 class TradingBot:
@@ -244,8 +245,17 @@ class TradingBot:
     def _analyze_symbol(self, symbol: str, account: Dict[str, Any]):
         """Analyze a single symbol and execute trades if needed"""
         try:
-            # Get historical data
-            df = alpaca_client.get_historical_data(symbol, timeframe='1D', limit=100)
+            # Get live data (on-demand, cached)
+            if config.USE_LIVE_DATA:
+                df = live_data_manager.get_live_data(
+                    symbol,
+                    timeframe='1D',
+                    lookback_bars=config.DEFAULT_LOOKBACK_BARS
+                )
+            else:
+                # Fallback to old method
+                df = alpaca_client.get_historical_data(symbol, timeframe='1D', limit=100)
+
             if df.empty:
                 trading_logger.warning(f"No data available for {symbol}")
                 return

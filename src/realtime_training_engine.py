@@ -9,6 +9,7 @@ import numpy as np
 import threading
 import time
 import queue
+import os
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Any
 import warnings
@@ -17,6 +18,7 @@ warnings.filterwarnings('ignore')
 from src.hybrid_ai_engine import HybridAIEngine
 from src.sp500_manager import SP500Manager
 from utils.logger import trading_logger
+from utils.live_data_manager import live_data_manager
 from config import config
 
 class RealTimeTrainingEngine:
@@ -147,27 +149,44 @@ class RealTimeTrainingEngine:
             trading_logger.error(f"Live data collection failed: {e}")
     
     def _fetch_latest_data(self, symbol: str) -> Optional[Dict[str, Any]]:
-        """Fetch latest data point for a symbol"""
+        """Fetch latest data point for a symbol using live data manager"""
         try:
-            import yfinance as yf
-            
-            ticker = yf.Ticker(symbol)
-            data = ticker.history(period="1d", interval="1m")
-            
-            if not data.empty:
-                latest = data.iloc[-1]
-                return {
-                    'symbol': symbol,
-                    'timestamp': datetime.now(),
-                    'open': latest['Open'],
-                    'high': latest['High'],
-                    'low': latest['Low'],
-                    'close': latest['Close'],
-                    'volume': latest['Volume']
-                }
-            
+            # Use live data manager for on-demand fetching (with caching)
+            if config.USE_LIVE_DATA:
+                df = live_data_manager.get_live_data(symbol, timeframe='1M', lookback_bars=1)
+
+                if not df.empty:
+                    latest = df.iloc[-1]
+                    return {
+                        'symbol': symbol,
+                        'timestamp': datetime.now(),
+                        'open': latest['open'],
+                        'high': latest['high'],
+                        'low': latest['low'],
+                        'close': latest['close'],
+                        'volume': latest['volume']
+                    }
+            else:
+                # Fallback to old method
+                import yfinance as yf
+
+                ticker = yf.Ticker(symbol)
+                data = ticker.history(period="1d", interval="1m")
+
+                if not data.empty:
+                    latest = data.iloc[-1]
+                    return {
+                        'symbol': symbol,
+                        'timestamp': datetime.now(),
+                        'open': latest['Open'],
+                        'high': latest['High'],
+                        'low': latest['Low'],
+                        'close': latest['Close'],
+                        'volume': latest['Volume']
+                    }
+
             return None
-            
+
         except Exception as e:
             trading_logger.warning(f"Failed to fetch latest data for {symbol}: {e}")
             return None
@@ -319,23 +338,34 @@ class RealTimeTrainingEngine:
             return None
     
     def _load_historical_data(self, symbol: str) -> Optional[pd.DataFrame]:
-        """Load historical data for a symbol"""
+        """Load historical data for a symbol (live or cached)"""
         try:
+            # Try live data manager first if enabled
+            if config.USE_LIVE_DATA:
+                df = live_data_manager.get_live_data(
+                    symbol,
+                    timeframe='1D',
+                    lookback_bars=config.SP500_MIN_TRAINING_DATA_DAYS
+                )
+                if not df.empty:
+                    return df
+
+            # Fallback to disk-based storage if it exists
             filename = f"data/sp500/historical/{symbol}_1d_data.csv"
             if os.path.exists(filename):
                 data = pd.read_csv(filename)
-                
+
                 if 'date' in data.columns:
                     data['date'] = pd.to_datetime(data['date'])
                     data = data.set_index('date')
                 elif 'datetime' in data.columns:
                     data['datetime'] = pd.to_datetime(data['datetime'])
                     data = data.set_index('datetime')
-                
+
                 return data
-            
+
             return None
-            
+
         except Exception as e:
             trading_logger.error(f"Failed to load historical data for {symbol}: {e}")
             return None
